@@ -12,6 +12,7 @@
 		53F5F5282CBC384200DE6366 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5272CBC384200DE6366 /* HomeViewController.swift */; };
 		53F5F52D2CBC384300DE6366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F5F52C2CBC384300DE6366 /* Assets.xcassets */; };
 		53F5F5302CBC384300DE6366 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 53F5F52F2CBC384300DE6366 /* Base */; };
+		53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F53B2CBC3A1B00DE6366 /* ViewCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		53F5F52C2CBC384300DE6366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53F5F52F2CBC384300DE6366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53F5F5312CBC384300DE6366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53F5F53B2CBC3A1B00DE6366 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		53F5F5222CBC384200DE6366 /* whatsAppClone */ = {
 			isa = PBXGroup;
 			children = (
+				53F5F53A2CBC3A0200DE6366 /* Commons */,
 				53F5F5382CBC389D00DE6366 /* Scenes */,
 				53F5F5372CBC388900DE6366 /* Application */,
 				53F5F52C2CBC384300DE6366 /* Assets.xcassets */,
@@ -86,6 +89,14 @@
 				53F5F5272CBC384200DE6366 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		53F5F53A2CBC3A0200DE6366 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				53F5F53B2CBC3A1B00DE6366 /* ViewCode.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				53F5F5282CBC384200DE6366 /* HomeViewController.swift in Sources */,
 				53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */,
 				53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */,
+				53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
