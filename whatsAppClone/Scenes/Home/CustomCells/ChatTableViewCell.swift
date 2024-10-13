@@ -74,6 +74,14 @@ class ChatTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    // MARK: - public function
+    public func updateDataTalk(talk: Talk) {
+        personImage.loadImage(from: talk.picture)
+        nameLabel.text = talk.name
+        dateLabel.text = talk.latest_timestamp
+        talkLabel.text = talk.lastChat
+    }
 }
 
 // MARK: - Extensions

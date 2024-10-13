@@ -17,6 +17,9 @@
 		53F5F5422CBC434800DE6366 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5412CBC434800DE6366 /* ChatTableViewCell.swift */; };
 		53F5F5442CBC4C7D00DE6366 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */; };
 		53F5F5462CBC4D2900DE6366 /* UIStackView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */; };
+		53F5F5492CBC57E300DE6366 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5482CBC57E300DE6366 /* Talk.swift */; };
+		53F5F54C2CBC594D00DE6366 /* ApiWhatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F54B2CBC594D00DE6366 /* ApiWhatsApp.swift */; };
+		53F5F54E2CBC5F4400DE6366 /* UImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F54D2CBC5F4400DE6366 /* UImageView+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		53F5F5412CBC434800DE6366 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+extensions.swift"; sourceTree = "<group>"; };
+		53F5F5482CBC57E300DE6366 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		53F5F54B2CBC594D00DE6366 /* ApiWhatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWhatsApp.swift; sourceTree = "<group>"; };
+		53F5F54D2CBC5F4400DE6366 /* UImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImageView+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 		53F5F5222CBC384200DE6366 /* whatsAppClone */ = {
 			isa = PBXGroup;
 			children = (
+				53F5F54A2CBC593B00DE6366 /* Services */,
+				53F5F5472CBC57CF00DE6366 /* Models */,
 				53F5F53A2CBC3A0200DE6366 /* Commons */,
 				53F5F5382CBC389D00DE6366 /* Scenes */,
 				53F5F5372CBC388900DE6366 /* Application */,
@@ -115,6 +123,7 @@
 			children = (
 				53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */,
 				53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */,
+				53F5F54D2CBC5F4400DE6366 /* UImageView+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,6 +134,22 @@
 				53F5F5412CBC434800DE6366 /* ChatTableViewCell.swift */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		53F5F5472CBC57CF00DE6366 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53F5F5482CBC57E300DE6366 /* Talk.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53F5F54A2CBC593B00DE6366 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				53F5F54B2CBC594D00DE6366 /* ApiWhatsApp.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +224,12 @@
 			files = (
 				53F5F5442CBC4C7D00DE6366 /* UIView+extensions.swift in Sources */,
 				53F5F5462CBC4D2900DE6366 /* UIStackView+extensions.swift in Sources */,
+				53F5F54C2CBC594D00DE6366 /* ApiWhatsApp.swift in Sources */,
 				53F5F5282CBC384200DE6366 /* HomeViewController.swift in Sources */,
 				53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */,
+				53F5F54E2CBC5F4400DE6366 /* UImageView+extensions.swift in Sources */,
 				53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */,
+				53F5F5492CBC57E300DE6366 /* Talk.swift in Sources */,
 				53F5F5422CBC434800DE6366 /* ChatTableViewCell.swift in Sources */,
 				53F5F53E2CBC3AE800DE6366 /* HomeView.swift in Sources */,
 				53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */,
