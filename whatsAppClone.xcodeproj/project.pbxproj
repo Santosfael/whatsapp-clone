@@ -13,6 +13,10 @@
 		53F5F52D2CBC384300DE6366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F5F52C2CBC384300DE6366 /* Assets.xcassets */; };
 		53F5F5302CBC384300DE6366 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 53F5F52F2CBC384300DE6366 /* Base */; };
 		53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F53B2CBC3A1B00DE6366 /* ViewCode.swift */; };
+		53F5F53E2CBC3AE800DE6366 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F53D2CBC3AE800DE6366 /* HomeView.swift */; };
+		53F5F5422CBC434800DE6366 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5412CBC434800DE6366 /* ChatTableViewCell.swift */; };
+		53F5F5442CBC4C7D00DE6366 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */; };
+		53F5F5462CBC4D2900DE6366 /* UIStackView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		53F5F52F2CBC384300DE6366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53F5F5312CBC384300DE6366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53F5F53B2CBC3A1B00DE6366 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		53F5F53D2CBC3AE800DE6366 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		53F5F5412CBC434800DE6366 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +94,9 @@
 		53F5F5392CBC38A900DE6366 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				53F5F5402CBC431900DE6366 /* CustomCells */,
 				53F5F5272CBC384200DE6366 /* HomeViewController.swift */,
+				53F5F53D2CBC3AE800DE6366 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -94,9 +104,27 @@
 		53F5F53A2CBC3A0200DE6366 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				53F5F53F2CBC419D00DE6366 /* Extensions */,
 				53F5F53B2CBC3A1B00DE6366 /* ViewCode.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		53F5F53F2CBC419D00DE6366 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */,
+				53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53F5F5402CBC431900DE6366 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				53F5F5412CBC434800DE6366 /* ChatTableViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F5F5442CBC4C7D00DE6366 /* UIView+extensions.swift in Sources */,
+				53F5F5462CBC4D2900DE6366 /* UIStackView+extensions.swift in Sources */,
 				53F5F5282CBC384200DE6366 /* HomeViewController.swift in Sources */,
 				53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */,
 				53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */,
+				53F5F5422CBC434800DE6366 /* ChatTableViewCell.swift in Sources */,
+				53F5F53E2CBC3AE800DE6366 /* HomeView.swift in Sources */,
 				53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +351,7 @@
 				DEVELOPMENT_TEAM = QY59Z7GK88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = whatsAppClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhatsApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -352,6 +385,7 @@
 				DEVELOPMENT_TEAM = QY59Z7GK88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = whatsAppClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhatsApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
