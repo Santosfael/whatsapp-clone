@@ -41,12 +41,14 @@ class SettingsViewController: UIViewController {
 
 class TabBarViewController: UITabBarController {
 
+    // MARK: - Filescycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
         setupTabBarController()
     }
 
+    // MARK: - Setup tab bar
     private func setupTabBarController() {
         let tabBars: [TabBarItem] = [.updates, .calls, .communities, .chats, .settings]
 
@@ -56,7 +58,11 @@ class TabBarViewController: UITabBarController {
             return viewController
         }
         self.setViewControllers(viewControllers, animated: true)
+        setuTabBarAppearance()
+    }
 
+    // MARK: - Appearance
+    private func setuTabBarAppearance() {
         self.tabBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
         self.tabBar.tintColor = Colors.secondaryColor
         self.tabBar.unselectedItemTintColor = Colors.primaryColor

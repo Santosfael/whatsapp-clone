@@ -8,12 +8,15 @@
 import UIKit
 
 enum TabBarItem {
+
+    // MARK: - Cases
     case updates
     case calls
     case communities
     case chats
     case settings
 
+    // MARK: - ViewControllers
     var viewController: UIViewController {
         switch self {
         case .updates:
@@ -29,6 +32,7 @@ enum TabBarItem {
         }
     }
 
+    // MARK: - Titles
     var title: String {
         switch self {
         case .updates:
@@ -44,6 +48,7 @@ enum TabBarItem {
         }
     }
 
+    // MARK: - Images
     var image: UIImage? {
         switch self {
         case .updates:
@@ -59,6 +64,7 @@ enum TabBarItem {
         }
     }
 
+    // MARK: Selected Images
     var selectedImages: UIImage? {
         switch self {
         case .updates:
