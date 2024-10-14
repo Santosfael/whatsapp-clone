@@ -62,6 +62,7 @@
 		53881D8B2CBDA59B00C5D4FE /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				5393FC9E2CBD92C800BF22D7 /* Images.swift */,
 				53881D8D2CBDA6B200C5D4FE /* Colors.swift */,
 			);
 			path = DesignSystem;
@@ -76,10 +77,18 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		538992A52CBDBCAC00FED179 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				53881D8B2CBDA59B00C5D4FE /* DesignSystem */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5393FC9D2CBD8D6400BF22D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5393FC9E2CBD92C800BF22D7 /* Images.swift */,
+				53F5F52C2CBC384300DE6366 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -103,27 +112,26 @@
 		53F5F5222CBC384200DE6366 /* whatsAppClone */ = {
 			isa = PBXGroup;
 			children = (
-				53881D8B2CBDA59B00C5D4FE /* DesignSystem */,
+				538992A52CBDBCAC00FED179 /* Utils */,
 				5393FC9D2CBD8D6400BF22D7 /* Resources */,
 				53F5F54A2CBC593B00DE6366 /* Services */,
 				53F5F5472CBC57CF00DE6366 /* Models */,
 				53F5F53A2CBC3A0200DE6366 /* Commons */,
 				53F5F5382CBC389D00DE6366 /* Scenes */,
-				53F5F5372CBC388900DE6366 /* Application */,
-				53F5F52C2CBC384300DE6366 /* Assets.xcassets */,
+				53F5F5372CBC388900DE6366 /* App */,
 				53F5F52E2CBC384300DE6366 /* LaunchScreen.storyboard */,
 				53F5F5312CBC384300DE6366 /* Info.plist */,
 			);
 			path = whatsAppClone;
 			sourceTree = "<group>";
 		};
-		53F5F5372CBC388900DE6366 /* Application */ = {
+		53F5F5372CBC388900DE6366 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				53F5F5232CBC384200DE6366 /* AppDelegate.swift */,
 				53F5F5252CBC384200DE6366 /* SceneDelegate.swift */,
 			);
-			path = Application;
+			path = App;
 			sourceTree = "<group>";
 		};
 		53F5F5382CBC389D00DE6366 /* Scenes */ = {

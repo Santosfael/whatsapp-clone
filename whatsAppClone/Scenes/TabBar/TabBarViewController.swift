@@ -58,6 +58,7 @@ class TabBarViewController: UITabBarController {
             return viewController
         }
         self.setViewControllers(viewControllers, animated: true)
+        self.selectedIndex = 3
         setuTabBarAppearance()
     }
 
