@@ -10,7 +10,7 @@ import UIKit
 class ChatTableViewCell: UITableViewCell {
     static let identifier = "ChatTableViewCell"
 
-    // MARK: - private variables
+    // MARK: - Private variables
     private lazy var personImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +65,7 @@ class ChatTableViewCell: UITableViewCell {
         return label
     }()
 
-    // MARK: - Initializes
+    // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()

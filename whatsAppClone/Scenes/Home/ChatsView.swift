@@ -7,8 +7,9 @@
 
 import UIKit
 
-class HomeView: UIView {
+class ChatsView: UIView {
 
+    //MARK: - Private variables
     private lazy var chartsTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -23,6 +24,7 @@ class HomeView: UIView {
         }
     }
 
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -32,6 +34,7 @@ class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Privates Functions
     private func getTalks() {
         Service.shared.getChat { result in
             switch result {
@@ -44,7 +47,8 @@ class HomeView: UIView {
     }
 }
 
-extension HomeView: ViewCode {
+// MARK: - Extensions
+extension ChatsView: ViewCode {
     func buildHierachy() {
         addSubview(chartsTableView)
     }
@@ -68,9 +72,9 @@ extension HomeView: ViewCode {
     }
 }
 
-extension HomeView: UITableViewDelegate {}
+extension ChatsView: UITableViewDelegate {}
 
-extension HomeView: UITableViewDataSource {
+extension ChatsView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return talks.count
     }

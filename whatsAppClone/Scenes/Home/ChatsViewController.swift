@@ -7,10 +7,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ChatsViewController: UIViewController {
 
-    private let content = HomeView()
+    // MARK: - Private variables
+    private let content = ChatsView()
 
+    // MARK: - Life cycle
     override func loadView() {
         super.loadView()
         view = content
@@ -34,6 +36,7 @@ class HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = editButton
     }
 
+    // MARK: - Privates actions functions
     @objc private func popupInfo() {
         print("cliquei")
     }

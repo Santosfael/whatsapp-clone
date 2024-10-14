@@ -15,10 +15,12 @@ enum ChatError: Error {
 
 typealias completion = (Result<[Talk], ChatError>) -> Void
 
+// MARK: - Protocols
 protocol ServiceProtocol {
     func getChat(completion: @escaping completion)
 }
 
+// MARK: - Classes
 class Service: ServiceProtocol {
     let session = URLSession.shared
     let url = "https://run.mocky.io/v3/d5023289-30f0-4785-86c8-4496b1500dae"
@@ -28,7 +30,8 @@ class Service: ServiceProtocol {
         return instance
     }()
 
-    func getChat(completion: @escaping completion) {
+    // MARK: - public functions
+    public func getChat(completion: @escaping completion) {
         guard let url = URL(string: url) else { return completion(.failure(.urlInvalid))}
 
         let dataTask = session.dataTask(with: url) { data, _, _ in
@@ -46,6 +49,4 @@ class Service: ServiceProtocol {
 
         dataTask.resume()
     }
-    
-
 }
