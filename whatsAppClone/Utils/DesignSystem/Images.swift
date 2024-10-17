@@ -9,7 +9,7 @@ import UIKit
 
 struct Images {
 
-    // MARK: - System name
+    // MARK: - Images System name
     static let archiveboxFill = UIImage(systemName: "archivebox.fill")
     static let chevronLeft = UIImage(systemName: "chevron.left")
     static let phone = UIImage(systemName: "phone")
@@ -17,8 +17,10 @@ struct Images {
     static let gear = UIImage(systemName: "gear")
     static let plus = UIImage(systemName: "plus")
     static let video = UIImage(systemName: "video")
+    static let cameraFill = UIImage(systemName: "camera.fill")
+    static let plusFill = UIImage(systemName: "plus.circle.fill")
 
-    // MARK: - Named
+    // MARK: - Images Named
     static let camera = UIImage(named: "camera")
     static let chatsFill = UIImage(named: "chats.fill")
     static let chats = UIImage(named: "chats")

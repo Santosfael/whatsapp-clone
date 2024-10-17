@@ -10,7 +10,7 @@ import UIKit
 class ChatTableViewCell: UITableViewCell {
     static let identifier = "ChatTableViewCell"
 
-    // MARK: - Private variables
+    // MARK: - Private Closures
     private lazy var personImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -75,7 +75,7 @@ class ChatTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - public function
+    // MARK: - Public Methods
     public func updateDataTalk(talk: Talk) {
         personImage.loadImage(from: talk.picture)
         nameLabel.text = talk.name
@@ -111,6 +111,4 @@ extension ChatTableViewCell: ViewCode {
     func applyAdditionalChanges() {
         accessoryType = .disclosureIndicator
     }
-    
-
 }

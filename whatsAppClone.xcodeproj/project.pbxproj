@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532BB43F2CC1848D001D4762 /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */; };
 		53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53881D8D2CBDA6B200C5D4FE /* Colors.swift */; };
 		538992A32CBDB62400FED179 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538992A22CBDB62400FED179 /* TabBarItem.swift */; };
 		5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */; };
 		5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9E2CBD92C800BF22D7 /* Images.swift */; };
+		53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */; };
+		53D076AD2CC035B2002F8F75 /* RightBarButtonsBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AC2CC035B2002F8F75 /* RightBarButtonsBarView.swift */; };
+		53D076AF2CC042D2002F8F75 /* CustomBarNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */; };
 		53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5232CBC384200DE6366 /* AppDelegate.swift */; };
 		53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5252CBC384200DE6366 /* SceneDelegate.swift */; };
 		53F5F5282CBC384200DE6366 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5272CBC384200DE6366 /* ChatsViewController.swift */; };
@@ -27,10 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
 		53881D8D2CBDA6B200C5D4FE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		538992A22CBDB62400FED179 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5393FC9E2CBD92C800BF22D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
+		53D076AC2CC035B2002F8F75 /* RightBarButtonsBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightBarButtonsBarView.swift; sourceTree = "<group>"; };
+		53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarNavigationButton.swift; sourceTree = "<group>"; };
 		53F5F5202CBC384200DE6366 /* whatsAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F5F5232CBC384200DE6366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F5F5252CBC384200DE6366 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 		538992A52CBDBCAC00FED179 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				53D076AB2CC03591002F8F75 /* Components */,
 				53881D8B2CBDA59B00C5D4FE /* DesignSystem */,
 			);
 			path = Utils;
@@ -91,6 +100,16 @@
 				53F5F52C2CBC384300DE6366 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		53D076AB2CC03591002F8F75 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				53D076AC2CC035B2002F8F75 /* RightBarButtonsBarView.swift */,
+				53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */,
+				532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		53F5F5172CBC384200DE6366 = {
@@ -168,6 +187,7 @@
 				53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */,
 				53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */,
 				53F5F54D2CBC5F4400DE6366 /* UImageView+extensions.swift */,
+				53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +288,9 @@
 			files = (
 				53F5F5442CBC4C7D00DE6366 /* UIView+extensions.swift in Sources */,
 				53F5F5462CBC4D2900DE6366 /* UIStackView+extensions.swift in Sources */,
+				53D076AF2CC042D2002F8F75 /* CustomBarNavigationButton.swift in Sources */,
+				532BB43F2CC1848D001D4762 /* NavigationBarButton.swift in Sources */,
+				53D076AD2CC035B2002F8F75 /* RightBarButtonsBarView.swift in Sources */,
 				53F5F54C2CBC594D00DE6366 /* ApiWhatsApp.swift in Sources */,
 				53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */,
 				53F5F5282CBC384200DE6366 /* ChatsViewController.swift in Sources */,
@@ -281,6 +304,7 @@
 				538992A32CBDB62400FED179 /* TabBarItem.swift in Sources */,
 				53F5F53E2CBC3AE800DE6366 /* ChatsView.swift in Sources */,
 				53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */,
+				53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

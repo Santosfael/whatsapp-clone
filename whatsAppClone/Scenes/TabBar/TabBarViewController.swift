@@ -48,7 +48,8 @@ class TabBarViewController: UITabBarController {
         setupTabBarController()
     }
 
-    // MARK: - Setup tab bar
+    // MARK: - Private Methods
+    /// Setup tab bar
     private func setupTabBarController() {
         let tabBars: [TabBarItem] = [.updates, .calls, .communities, .chats, .settings]
 
@@ -59,11 +60,11 @@ class TabBarViewController: UITabBarController {
         }
         self.setViewControllers(viewControllers, animated: true)
         self.selectedIndex = 3
-        setuTabBarAppearance()
+        setupTabBarAppearance()
     }
 
-    // MARK: - Appearance
-    private func setuTabBarAppearance() {
+    /// Appearance
+    private func setupTabBarAppearance() {
         self.tabBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
         self.tabBar.tintColor = Colors.secondaryColor
         self.tabBar.unselectedItemTintColor = Colors.primaryColor

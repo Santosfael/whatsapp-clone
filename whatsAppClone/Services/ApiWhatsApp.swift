@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: Enuns
 enum ChatError: Error {
     case urlInvalid
     case noProcessData
@@ -30,7 +31,7 @@ class Service: ServiceProtocol {
         return instance
     }()
 
-    // MARK: - public functions
+    // MARK: - Public Methods
     public func getChat(completion: @escaping completion) {
         guard let url = URL(string: url) else { return completion(.failure(.urlInvalid))}
 

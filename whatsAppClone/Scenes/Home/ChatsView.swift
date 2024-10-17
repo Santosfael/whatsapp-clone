@@ -9,7 +9,7 @@ import UIKit
 
 class ChatsView: UIView {
 
-    //MARK: - Private variables
+    //MARK: - Private Closures
     private lazy var chartsTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +34,7 @@ class ChatsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Privates Functions
+    // MARK: - Privates Methods
     private func getTalks() {
         Service.shared.getChat { result in
             switch result {

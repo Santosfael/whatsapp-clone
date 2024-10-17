@@ -9,7 +9,7 @@ import UIKit
 
 extension UIImageView {
 
-    func loadImage(from url: String) {
+    public func loadImage(from url: String) {
         guard let imageURL = URL(string: url) else { return }
 
         let cache =  URLCache.shared
@@ -34,7 +34,8 @@ extension UIImageView {
         }
     }
 
-    func transition(toImage image: UIImage?) {
+    // MARK: - Private Methods
+    private func transition(toImage image: UIImage?) {
         UIView.transition(with: self, duration: 0.2,
                           options: [.transitionCrossDissolve],
                           animations: {
