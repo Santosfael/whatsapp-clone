@@ -9,17 +9,22 @@ import UIKit
 
 class ChatsView: UIView {
 
+    // MARK: - Private variables
+    private var setIsHiddenCollection = true
+
     //MARK: - Private Closures
-    private lazy var chartsTableView: UITableView = {
+    private lazy var chatsTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
 
+    private let filterHeaderView = FilterChatCollectionView()
+
     private lazy var talks = [Talk]() {
         didSet {
             DispatchQueue.main.async {
-                self.chartsTableView.reloadData()
+                self.chatsTableView.reloadData()
             }
         }
     }
@@ -45,34 +50,54 @@ class ChatsView: UIView {
             }
         }
     }
+
+    private func configureHeaderTableView() {
+        filterHeaderView.frame = CGRect(x: 0, y: 0, width: frame.width, height: 50)
+        filterHeaderView.editAlphaCollectionView(alpha: 1)
+        chatsTableView.tableHeaderView = filterHeaderView
+    }
 }
 
-// MARK: - Extensions
+// MARK: - Extension Custom
 extension ChatsView: ViewCode {
     func buildHierachy() {
-        addSubview(chartsTableView)
+        addSubviews(chatsTableView)
     }
     
     func setupConstrants() {
         NSLayoutConstraint.activate([
-            chartsTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            chartsTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            chartsTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            chartsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            chatsTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            chatsTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            chatsTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            chatsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     
     func applyAdditionalChanges() {
         backgroundColor = .systemBackground
-        chartsTableView.delegate = self
-        chartsTableView.dataSource = self
+        chatsTableView.delegate = self
+        chatsTableView.dataSource = self
 
-        chartsTableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.identifier)
+        chatsTableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.identifier)
         getTalks()
     }
 }
 
-extension ChatsView: UITableViewDelegate {}
+// MARK: - Extensions UITableView
+extension ChatsView: UITableViewDelegate {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentSize.width > 100 {
+            if setIsHiddenCollection {
+            } else {
+                UIView.animate(withDuration: 0.2) {
+                    self.configureHeaderTableView()
+                }
+            }
+            setIsHiddenCollection = filterHeaderView.setIsHiddenCollection(isHidden: false)
+        }
+    }
+}
 
 extension ChatsView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

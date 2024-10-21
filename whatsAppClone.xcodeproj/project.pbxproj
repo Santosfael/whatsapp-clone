@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5300C4A22CC57ADD000E43EB /* FilterChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5300C4A12CC57ADD000E43EB /* FilterChatCollectionViewCell.swift */; };
 		532BB43F2CC1848D001D4762 /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */; };
 		53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53881D8D2CBDA6B200C5D4FE /* Colors.swift */; };
 		538992A32CBDB62400FED179 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538992A22CBDB62400FED179 /* TabBarItem.swift */; };
 		5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */; };
 		5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9E2CBD92C800BF22D7 /* Images.swift */; };
 		53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */; };
-		53D076AD2CC035B2002F8F75 /* RightBarButtonsBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AC2CC035B2002F8F75 /* RightBarButtonsBarView.swift */; };
+		53D076AD2CC035B2002F8F75 /* CustomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */; };
 		53D076AF2CC042D2002F8F75 /* CustomBarNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */; };
+		53F48CF22CC6E564009A7FAF /* FilterChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F48CF12CC6E564009A7FAF /* FilterChatCollectionView.swift */; };
 		53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5232CBC384200DE6366 /* AppDelegate.swift */; };
 		53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5252CBC384200DE6366 /* SceneDelegate.swift */; };
 		53F5F5282CBC384200DE6366 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5272CBC384200DE6366 /* ChatsViewController.swift */; };
@@ -31,14 +33,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5300C4A12CC57ADD000E43EB /* FilterChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
 		53881D8D2CBDA6B200C5D4FE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		538992A22CBDB62400FED179 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5393FC9E2CBD92C800BF22D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
-		53D076AC2CC035B2002F8F75 /* RightBarButtonsBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightBarButtonsBarView.swift; sourceTree = "<group>"; };
+		53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsView.swift; sourceTree = "<group>"; };
 		53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarNavigationButton.swift; sourceTree = "<group>"; };
+		53F48CF12CC6E564009A7FAF /* FilterChatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChatCollectionView.swift; sourceTree = "<group>"; };
 		53F5F5202CBC384200DE6366 /* whatsAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F5F5232CBC384200DE6366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F5F5252CBC384200DE6366 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,11 +109,19 @@
 		53D076AB2CC03591002F8F75 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				53D076AC2CC035B2002F8F75 /* RightBarButtonsBarView.swift */,
+				53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */,
 				53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */,
 				532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		53F48CF02CC6E538009A7FAF /* FilterChat */ = {
+			isa = PBXGroup;
+			children = (
+				53F48CF12CC6E564009A7FAF /* FilterChatCollectionView.swift */,
+			);
+			path = FilterChat;
 			sourceTree = "<group>";
 		};
 		53F5F5172CBC384200DE6366 = {
@@ -165,6 +177,7 @@
 		53F5F5392CBC38A900DE6366 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				53F48CF02CC6E538009A7FAF /* FilterChat */,
 				53F5F5402CBC431900DE6366 /* CustomCells */,
 				53F5F5272CBC384200DE6366 /* ChatsViewController.swift */,
 				53F5F53D2CBC3AE800DE6366 /* ChatsView.swift */,
@@ -196,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				53F5F5412CBC434800DE6366 /* ChatTableViewCell.swift */,
+				5300C4A12CC57ADD000E43EB /* FilterChatCollectionViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -289,13 +303,15 @@
 				53F5F5442CBC4C7D00DE6366 /* UIView+extensions.swift in Sources */,
 				53F5F5462CBC4D2900DE6366 /* UIStackView+extensions.swift in Sources */,
 				53D076AF2CC042D2002F8F75 /* CustomBarNavigationButton.swift in Sources */,
+				53F48CF22CC6E564009A7FAF /* FilterChatCollectionView.swift in Sources */,
 				532BB43F2CC1848D001D4762 /* NavigationBarButton.swift in Sources */,
-				53D076AD2CC035B2002F8F75 /* RightBarButtonsBarView.swift in Sources */,
+				53D076AD2CC035B2002F8F75 /* CustomButtonsView.swift in Sources */,
 				53F5F54C2CBC594D00DE6366 /* ApiWhatsApp.swift in Sources */,
 				53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */,
 				53F5F5282CBC384200DE6366 /* ChatsViewController.swift in Sources */,
 				5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */,
 				53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */,
+				5300C4A22CC57ADD000E43EB /* FilterChatCollectionViewCell.swift in Sources */,
 				53F5F54E2CBC5F4400DE6366 /* UImageView+extensions.swift in Sources */,
 				53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */,
 				53F5F5492CBC57E300DE6366 /* Talk.swift in Sources */,

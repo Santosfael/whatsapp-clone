@@ -11,6 +11,7 @@ enum NavigationBarButton {
     // MARK: - Cases
     case primaryButton(image: UIImage?)
     case secondaryButton(image: UIImage?)
+    case ternaryButton(title: String, backgroundColor: UIColor?)
 
     // MARK: - Public Methods
     func createButton() -> UIButton {
@@ -20,14 +21,22 @@ enum NavigationBarButton {
                                                                                            targetSize: CGSize(width: 20, height: 20)),
                                                                 tintColor: Colors.secondaryColor,
                                                                 size: CGSize(width: 28, height: 28),
-                                                                backgroundColor: Colors.backgroundgGrayLight)
+                                                                backgroundColor: Colors.backgroundGrayLight8)
 
         case .secondaryButton(let image):
             lazy var button = CustomBarNavigationButton.createCustomButton(image: image,
-                                                                tintColor: Colors.ternaryColor,
-                                                                size: CGSize(width: 28, height: 28))
+                                                                           tintColor: Colors.ternaryColor,
+                                                                           size: CGSize(width: 28, height: 28))
             button.contentVerticalAlignment = .fill
             button.contentHorizontalAlignment = .fill
+            return button
+        case .ternaryButton(let title, let backgroundColor):
+            lazy var button: UIButton = {
+                let button = UIButton(type: .system)
+                button.setTitle(title, for: .normal)
+                button.backgroundColor = backgroundColor
+                return button
+            }()
             return button
         }
     }

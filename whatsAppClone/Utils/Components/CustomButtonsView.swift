@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RightBarButtonsBarView: UIView {
+final class CustomButtonsView: UIView {
 
     // MARK: - Initializeds
     override init(frame: CGRect) {
@@ -19,7 +19,7 @@ final class RightBarButtonsBarView: UIView {
     }
 
     // MARK: - Public Methods
-    public func addRightBarButtonsItems(buttonTypes: [NavigationBarButton]) -> UIBarButtonItem {
+    public func addBarButtonsItems(buttonTypes: [NavigationBarButton]) -> UIBarButtonItem {
         let buttons = buttonTypes.map { $0.createButton() }
 
         if buttons.count == 1 {
@@ -30,5 +30,14 @@ final class RightBarButtonsBarView: UIView {
             stackView.spacing = 10
             return UIBarButtonItem(customView: stackView)
         }
+    }
+
+    public func addCustomButtons(buttonTypes: [NavigationBarButton]) -> UIView {
+        let buttons = buttonTypes.map { $0.createButton() }
+        let stackView = UIStackView(arrangedSubviews: buttons)
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+
+        return stackView
     }
 }

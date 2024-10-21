@@ -11,7 +11,8 @@ class ChatsViewController: UIViewController {
 
     // MARK: - Private variables
     private let content = ChatsView()
-    private let buttonsNavigation = RightBarButtonsBarView()
+    private let buttonsNavigation = CustomButtonsView()
+    private lazy var searchController = UISearchController(searchResultsController: nil)
 
     // MARK: - Lifecycle
     override func loadView() {
@@ -32,8 +33,16 @@ class ChatsViewController: UIViewController {
     // MARK: - Private Methods actions
     private func configureNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = buttonsNavigation.addRightBarButtonsItems(buttonTypes: [.primaryButton(image: Images.cameraFill), .secondaryButton(image: Images.plusFill)])
-        navigationItem.leftBarButtonItem = buttonsNavigation.addRightBarButtonsItems(buttonTypes: [.primaryButton(image: Images.meetballMenu)])
+        navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.cameraFill), .secondaryButton(image: Images.plusFill)])
+        navigationItem.leftBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.meetballMenu)])
+        navigationItem.searchController = searchController
+        appearanceNavigationBar()
+    }
+
+    private func appearanceNavigationBar() {
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: Colors.secondaryColor
+        ], for: .normal)
     }
 
     @objc private func popupInfo() {
