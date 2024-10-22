@@ -20,6 +20,7 @@ class ChatsView: UIView {
     }()
 
     private let filterHeaderView = FilterChatCollectionView()
+    private let footerTableView = FooterTableView()
 
     private lazy var talks = [Talk]() {
         didSet {
@@ -51,10 +52,22 @@ class ChatsView: UIView {
         }
     }
 
+    private func configureTableView() {
+        chatsTableView.delegate = self
+        chatsTableView.dataSource = self
+
+        chatsTableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.identifier)
+    }
+
     private func configureHeaderTableView() {
         filterHeaderView.frame = CGRect(x: 0, y: 0, width: frame.width, height: 50)
         filterHeaderView.editAlphaCollectionView(alpha: 1)
         chatsTableView.tableHeaderView = filterHeaderView
+    }
+
+    private func configureFooterTableView() {
+        footerTableView.frame = CGRect(x: 0, y: chatsTableView.frame.height, width: frame.width, height: 100)
+        chatsTableView.tableFooterView = footerTableView
     }
 }
 
@@ -75,10 +88,8 @@ extension ChatsView: ViewCode {
     
     func applyAdditionalChanges() {
         backgroundColor = .systemBackground
-        chatsTableView.delegate = self
-        chatsTableView.dataSource = self
-
-        chatsTableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.identifier)
+        configureTableView()
+        configureFooterTableView()
         getTalks()
     }
 }
