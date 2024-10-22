@@ -21,10 +21,20 @@ final class FooterTableView: UIView {
     private lazy var infoEncryptLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Your personal messages are end-to-end encrypted."
+        label.text = "Your personal messages are"
         label.textColor = Colors.primaryColor
         label.font = UIFont.systemFont(ofSize: 11)
         return label
+    }()
+
+    private lazy var endToEndEncryptedButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("end-to-end encrypted.", for: .normal)
+        button.setTitleColor(Colors.ternaryColor, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 11)
+        button.addTarget(self, action: #selector(encryptInfo), for: .touchUpInside)
+        return button
     }()
 
     private lazy var contentStackView: UIStackView = {
@@ -45,12 +55,15 @@ final class FooterTableView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    // MARK: - Private Actions Button
+    @objc private func encryptInfo() {}
 }
 
 // MARK: - Extension Custom
 extension FooterTableView: ViewCode {
     func buildHierachy() {
-        contentStackView.addArrangedSubviews(lockImage, infoEncryptLabel)
+        contentStackView.addArrangedSubviews(lockImage, infoEncryptLabel, endToEndEncryptedButton)
         addSubview(contentStackView)
     }
 
