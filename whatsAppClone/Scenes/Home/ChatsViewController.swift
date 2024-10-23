@@ -18,6 +18,7 @@ class ChatsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = content
+        content.delegate = self
     }
 
     override func viewDidLoad() {
@@ -27,13 +28,18 @@ class ChatsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
         configureNavigationBar()
+    }
+
+    deinit {
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 
     // MARK: - Private Methods actions
     private func configureNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.cameraFill), .secondaryButton(image: Images.plusFill)])
+        navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.cameraFill, backgroundColor: Colors.backgroundGrayLight8), .secondaryButton(image: Images.plusFill)])
         navigationItem.leftBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.meetballMenu)])
         navigationItem.searchController = searchController
         appearanceNavigationBar()
@@ -50,3 +56,9 @@ class ChatsViewController: UIViewController {
     }
 }
 
+extension ChatsViewController: ChatsViewControllerDelegate {
+    func chatMessageUser(user: Talk) {
+        let messagesViewController = MessagesViewController(user: user)
+        navigationController?.pushViewController(messagesViewController, animated: true)
+    }
+}

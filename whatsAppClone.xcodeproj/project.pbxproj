@@ -12,8 +12,11 @@
 		53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53881D8D2CBDA6B200C5D4FE /* Colors.swift */; };
 		538992A32CBDB62400FED179 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538992A22CBDB62400FED179 /* TabBarItem.swift */; };
 		539051F02CC8099F00ADD262 /* FooterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051EF2CC8099F00ADD262 /* FooterTableView.swift */; };
+		539051F32CC8289000ADD262 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051F22CC8289000ADD262 /* MessagesViewController.swift */; };
+		539051F72CC82A5100ADD262 /* ChatsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */; };
 		5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */; };
 		5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9E2CBD92C800BF22D7 /* Images.swift */; };
+		53BD41402CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BD413F2CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift */; };
 		53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */; };
 		53D076AD2CC035B2002F8F75 /* CustomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */; };
 		53D076AF2CC042D2002F8F75 /* CustomBarNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */; };
@@ -39,8 +42,11 @@
 		53881D8D2CBDA6B200C5D4FE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		538992A22CBDB62400FED179 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		539051EF2CC8099F00ADD262 /* FooterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTableView.swift; sourceTree = "<group>"; };
+		539051F22CC8289000ADD262 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5393FC9E2CBD92C800BF22D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		53BD413F2CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupPhotoNameNavigationBarView.swift; sourceTree = "<group>"; };
 		53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
 		53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsView.swift; sourceTree = "<group>"; };
 		53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarNavigationButton.swift; sourceTree = "<group>"; };
@@ -100,6 +106,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		539051F12CC8287200ADD262 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				539051F22CC8289000ADD262 /* MessagesViewController.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		539051F52CC82A3D00ADD262 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		5393FC9D2CBD8D6400BF22D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +137,7 @@
 				53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */,
 				532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */,
 				539051EF2CC8099F00ADD262 /* FooterTableView.swift */,
+				53BD413F2CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -171,6 +194,7 @@
 		53F5F5382CBC389D00DE6366 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				539051F12CC8287200ADD262 /* Messages */,
 				538992A12CBDB60200FED179 /* TabBar */,
 				53F5F5392CBC38A900DE6366 /* Home */,
 			);
@@ -180,6 +204,7 @@
 		53F5F5392CBC38A900DE6366 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				539051F52CC82A3D00ADD262 /* Delegates */,
 				53F48CF02CC6E538009A7FAF /* FilterChat */,
 				53F5F5402CBC431900DE6366 /* CustomCells */,
 				53F5F5272CBC384200DE6366 /* ChatsViewController.swift */,
@@ -315,6 +340,7 @@
 				53F5F5282CBC384200DE6366 /* ChatsViewController.swift in Sources */,
 				5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */,
 				53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */,
+				539051F72CC82A5100ADD262 /* ChatsViewControllerDelegate.swift in Sources */,
 				5300C4A22CC57ADD000E43EB /* FilterChatCollectionViewCell.swift in Sources */,
 				53F5F54E2CBC5F4400DE6366 /* UImageView+extensions.swift in Sources */,
 				53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */,
@@ -322,9 +348,11 @@
 				53F5F5422CBC434800DE6366 /* ChatTableViewCell.swift in Sources */,
 				5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */,
 				538992A32CBDB62400FED179 /* TabBarItem.swift in Sources */,
+				53BD41402CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift in Sources */,
 				53F5F53E2CBC3AE800DE6366 /* ChatsView.swift in Sources */,
 				53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */,
 				53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */,
+				539051F32CC8289000ADD262 /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

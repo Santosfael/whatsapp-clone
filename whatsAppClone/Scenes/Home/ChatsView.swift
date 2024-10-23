@@ -22,6 +22,9 @@ class ChatsView: UIView {
     private let filterHeaderView = FilterChatCollectionView()
     private let footerTableView = FooterTableView()
 
+    // MARK: - Delegate
+    weak var delegate: ChatsViewControllerDelegate?
+
     private lazy var talks = [Talk]() {
         didSet {
             DispatchQueue.main.async {
@@ -120,5 +123,9 @@ extension ChatsView: UITableViewDataSource {
         let talk = talks[indexPath.row]
         cell.updateDataTalk(talk: talk)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.chatMessageUser(user: talks[indexPath.row])
     }
 }
