@@ -44,7 +44,6 @@ class TabBarViewController: UITabBarController {
     // MARK: - Filescycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
         setupTabBarController()
     }
 

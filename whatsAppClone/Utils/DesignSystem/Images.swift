@@ -37,5 +37,7 @@ struct Images {
     static let unarchive = UIImage(named: "unarchive")
     static let unpin = UIImage(named: "unpin")
     static let unread = UIImage(named: "unread")
+    static let sticker = UIImage(named: "sticker")
+    static let chatBackgroundImage = UIImage(named: "image-background")
 
 }

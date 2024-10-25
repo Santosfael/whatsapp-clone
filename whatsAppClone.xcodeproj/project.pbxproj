@@ -17,6 +17,7 @@
 		5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */; };
 		5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9E2CBD92C800BF22D7 /* Images.swift */; };
 		53BD41402CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BD413F2CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift */; };
+		53BD41422CC9865700CDCD76 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BD41412CC9865700CDCD76 /* MessagesView.swift */; };
 		53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */; };
 		53D076AD2CC035B2002F8F75 /* CustomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */; };
 		53D076AF2CC042D2002F8F75 /* CustomBarNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */; };
@@ -47,6 +48,7 @@
 		5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5393FC9E2CBD92C800BF22D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		53BD413F2CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupPhotoNameNavigationBarView.swift; sourceTree = "<group>"; };
+		53BD41412CC9865700CDCD76 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
 		53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsView.swift; sourceTree = "<group>"; };
 		53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarNavigationButton.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				539051F22CC8289000ADD262 /* MessagesViewController.swift */,
+				53BD41412CC9865700CDCD76 /* MessagesView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				53F5F53E2CBC3AE800DE6366 /* ChatsView.swift in Sources */,
 				53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */,
 				53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */,
+				53BD41422CC9865700CDCD76 /* MessagesView.swift in Sources */,
 				539051F32CC8289000ADD262 /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,19 +10,30 @@ import UIKit
 class MessagesViewController: UIViewController {
     private let buttonsNavigation = CustomButtonsView()
     private let customGroupPhotoAndNameNavigationBar = CustomGroupPhotoNameNavigationBarView()
+    private let messagesView = MessagesView()
     private var user: Talk?
 
+    // MARK: Lifecicly
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        configureNavigationBar()
+        configureAppearanceBar()
+        self.navigationItem.largeTitleDisplayMode = .never
+        self.view = messagesView
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
-        configureNavigationBar()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.backgroundColor = .systemBackground
+        self.navigationItem.largeTitleDisplayMode = .always
+    }
+
+    // MARK: - Initialized
     init(user: Talk) {
         super.init(nibName: nil, bundle: nil)
         self.user = user
@@ -34,6 +45,7 @@ class MessagesViewController: UIViewController {
 
     // MARK: - Private Methods actions
     private func configureNavigationBar() {
+
         navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.defaultButton(image: Images.video, targetSize: CGSize(width: 32, height: 32), tintColor: Colors.secondaryColor), .defaultButton(image: Images.phone, targetSize: CGSize(width: 32, height: 32), tintColor:  Colors.secondaryColor)])
 
         navigationItem.leftBarButtonItems = [
@@ -44,6 +56,14 @@ class MessagesViewController: UIViewController {
             UIBarButtonItem(customView: customGroupPhotoAndNameNavigationBar)
         ]
         navigationItem.leftBarButtonItem?.tintColor = Colors.secondaryColor
+    }
+
+    private func configureAppearanceBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = Colors.backgroundGrayLight
+        self.navigationItem.standardAppearance = appearance
+        self.navigationItem.scrollEdgeAppearance = appearance
     }
 
     @objc private func backButtonTapped() {
