@@ -26,6 +26,7 @@ class Service: ServiceProtocol {
     let session = URLSession.shared
     let url = "https://run.mocky.io/v3/d5023289-30f0-4785-86c8-4496b1500dae"
 
+    // MARK: Static Method
     static let shared: Service = {
         let instance = Service()
         return instance

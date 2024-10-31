@@ -8,6 +8,8 @@
 import UIKit
 
 class MessagesViewController: UIViewController {
+
+    // MARK: - Private properties
     private let buttonsNavigation = CustomButtonsView()
     private let customGroupPhotoAndNameNavigationBar = CustomGroupPhotoNameNavigationBarView()
     private let messagesView = MessagesView()
@@ -58,15 +60,16 @@ class MessagesViewController: UIViewController {
         navigationItem.leftBarButtonItem?.tintColor = Colors.secondaryColor
     }
 
+    @objc private func backButtonTapped() {
+        navigationController?.popViewController(animated: true)
+    }
+
+    // MARK: - Private Methods
     private func configureAppearanceBar() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = Colors.backgroundGrayLight
         self.navigationItem.standardAppearance = appearance
         self.navigationItem.scrollEdgeAppearance = appearance
-    }
-
-    @objc private func backButtonTapped() {
-        navigationController?.popViewController(animated: true)
     }
 }

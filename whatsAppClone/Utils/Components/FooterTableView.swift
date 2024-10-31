@@ -9,7 +9,7 @@ import UIKit
 
 final class FooterTableView: UIView {
 
-    // MARK: - Private Clousure
+    // MARK: - Private UI Components
     private lazy var lockImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +46,7 @@ final class FooterTableView: UIView {
         return stackView
     }()
 
-    // MARK: - Initializeds
+    // MARK: - Initialized
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -60,7 +60,7 @@ final class FooterTableView: UIView {
     @objc private func encryptInfo() {}
 }
 
-// MARK: - Extension Custom
+// MARK: - Custom Extension
 extension FooterTableView: ViewCode {
     func buildHierachy() {
         contentStackView.addArrangedSubviews(lockImage, infoEncryptLabel, endToEndEncryptedButton)
@@ -69,9 +69,11 @@ extension FooterTableView: ViewCode {
 
     func setupConstrants() {
         NSLayoutConstraint.activate([
+            // Lock Image
             lockImage.widthAnchor.constraint(equalToConstant: 12),
             lockImage.heightAnchor.constraint(equalToConstant: 12),
 
+            // StackView
             contentStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             contentStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -59)

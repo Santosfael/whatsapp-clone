@@ -9,11 +9,11 @@ import UIKit
 
 final class FilterChatCollectionView: UIView {
 
-    // MARK: - Private Variables
+    // MARK: - Private Properties
     private let filterOptions: [String] = ["All", "Unread", "Favourites", "Groups"]
     private var selectedFilterItem: Int = 0
 
-    // MARK: - Private Closure
+    // MARK: - Private UI Components
     private lazy var filterChatCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -58,7 +58,7 @@ final class FilterChatCollectionView: UIView {
     }
 }
 
-// MARK: - Extension Custom
+// MARK: - Custom Extension
 extension FilterChatCollectionView: ViewCode {
     func buildHierachy() {
         addSubview(filterChatCollectionView)

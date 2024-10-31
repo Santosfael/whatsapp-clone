@@ -9,21 +9,10 @@ import UIKit
 
 class ChatsView: UIView {
 
-    // MARK: - Private variables
+    // MARK: - Private Propertie
     private var setIsHiddenCollection = true
-
-    //MARK: - Private Closures
-    private lazy var chatsTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-
     private let filterHeaderView = FilterChatCollectionView()
     private let footerTableView = FooterTableView()
-
-    // MARK: - Delegate
-    weak var delegate: ChatsViewControllerDelegate?
 
     private lazy var talks = [Talk]() {
         didSet {
@@ -32,6 +21,16 @@ class ChatsView: UIView {
             }
         }
     }
+
+    // MARK: - Private UI Components
+    private lazy var chatsTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+
+    // MARK: - Delegate
+    weak var delegate: ChatsViewControllerDelegate?
 
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -74,7 +73,7 @@ class ChatsView: UIView {
     }
 }
 
-// MARK: - Extension Custom
+// MARK: - Custom Extension
 extension ChatsView: ViewCode {
     func buildHierachy() {
         addSubviews(chatsTableView)

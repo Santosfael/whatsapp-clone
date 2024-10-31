@@ -9,7 +9,7 @@ import UIKit
 
 class ChatsViewController: UIViewController {
 
-    // MARK: - Private variables
+    // MARK: - Private Properties
     private let content = ChatsView()
     private let buttonsNavigation = CustomButtonsView()
     private lazy var searchController = UISearchController(searchResultsController: nil)
@@ -32,11 +32,12 @@ class ChatsViewController: UIViewController {
         configureNavigationBar()
     }
 
+    // MARK: - deinit
     deinit {
         navigationController?.navigationBar.prefersLargeTitles = false
     }
 
-    // MARK: - Private Methods actions
+    // MARK: - Private Methods
     private func configureNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.cameraFill, backgroundColor: Colors.backgroundGrayLight8), .secondaryButton(image: Images.plusFill)])
@@ -56,6 +57,7 @@ class ChatsViewController: UIViewController {
     }
 }
 
+// MARK: - Custom Extension
 extension ChatsViewController: ChatsViewControllerDelegate {
     func chatMessageUser(user: Talk) {
         let messagesViewController = MessagesViewController(user: user)

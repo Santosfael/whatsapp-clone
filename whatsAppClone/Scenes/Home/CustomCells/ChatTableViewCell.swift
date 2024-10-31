@@ -8,10 +8,12 @@
 import UIKit
 
 class ChatTableViewCell: UITableViewCell {
+
+    // MARK: - Static Propertie
     static let identifier = "ChatTableViewCell"
 
-    // MARK: - Private Closures
-    private lazy var personImage: UIImageView = {
+    // MARK: - Private UI Components
+    private lazy var personImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(systemName: "person")
@@ -77,32 +79,32 @@ class ChatTableViewCell: UITableViewCell {
 
     // MARK: - Public Methods
     public func updateDataTalk(talk: Talk) {
-        personImage.loadImage(from: talk.picture)
+        personImageView.loadImage(from: talk.picture)
         nameLabel.text = talk.name
         dateLabel.text = talk.latest_timestamp
         talkLabel.text = talk.lastChat
     }
 }
 
-// MARK: - Extensions
+// MARK: - Custom Extension
 extension ChatTableViewCell: ViewCode {
     func buildHierachy() {
-        addSubviews(personImage, containerVerticalStack)
+        addSubviews(personImageView, containerVerticalStack)
         containerVerticalStack.addArrangedSubviews(containerNameAndDateHorizontalStack, talkLabel)
         containerNameAndDateHorizontalStack.addArrangedSubviews(nameLabel, dateLabel)
     }
     
     func setupConstrants() {
         NSLayoutConstraint.activate([
-            /// Image
-            personImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            personImage.centerYAnchor.constraint(equalTo: centerYAnchor),
-            personImage.widthAnchor.constraint(equalToConstant: 52),
-            personImage.heightAnchor.constraint(equalToConstant: 52),
+            // Image View
+            personImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            personImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            personImageView.widthAnchor.constraint(equalToConstant: 52),
+            personImageView.heightAnchor.constraint(equalToConstant: 52),
 
-            /// Vertical Stack
+            // Vertical Stack
             containerVerticalStack.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            containerVerticalStack.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 12),
+            containerVerticalStack.leadingAnchor.constraint(equalTo: personImageView.trailingAnchor, constant: 12),
             containerVerticalStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
             containerVerticalStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])

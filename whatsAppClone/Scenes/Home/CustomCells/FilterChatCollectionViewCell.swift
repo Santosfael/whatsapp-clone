@@ -9,10 +9,10 @@ import UIKit
 
 class FilterChatCollectionViewCell: UICollectionViewCell {
 
-    // MARK: - Static variable
+    // MARK: - Static Propertie
     static let identifier = "FilterChatCollectionViewCell"
 
-    // MARK: Private Closure
+    // MARK: - Private UI Components
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -47,7 +47,7 @@ class FilterChatCollectionViewCell: UICollectionViewCell {
     }
 }
 
-//MARK: - Extension Custom
+// MARK: - Custom Extension
 extension FilterChatCollectionViewCell: ViewCode {
     func buildHierachy() {
         contentView.addSubview(titleLabel)

@@ -9,10 +9,10 @@ import UIKit
 
 class MessagesView: UIView {
 
-    // MARK: - Private variables
+    // MARK: - Private Properties
     private var bottomConstraint: NSLayoutConstraint?
 
-    // MARK: - Private closures
+    // MARK: - Private UI Components
     private lazy var plusImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -98,7 +98,7 @@ class MessagesView: UIView {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    // MARK: - Private Selector
+    // MARK: - Private Methods Actions
     @objc private func keyboardWillShow(sender: Notification) {
         guard let userInfo = sender.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
@@ -123,7 +123,7 @@ class MessagesView: UIView {
     }
 }
 
-// MARK: - Extension custom
+// MARK: - Custom Extension
 extension MessagesView: ViewCode {
     func buildHierachy() {
         addSubview(contentMessageView)
@@ -134,14 +134,18 @@ extension MessagesView: ViewCode {
     func setupConstrants() {
         bottomConstraint = contentMessageView.bottomAnchor.constraint(equalTo: bottomAnchor)
         NSLayoutConstraint.activate([
+            // Content Message
             contentMessageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             contentMessageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            // Altera o bootm da contentMessageView caso o teclado apareca
             bottomConstraint ?? contentMessageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             contentMessageView.heightAnchor.constraint(equalToConstant: 76),
 
+            // Icon Image
             plusImage.widthAnchor.constraint(equalToConstant: 32),
             plusImage.heightAnchor.constraint(equalToConstant: 32),
 
+            // Content Stack View
             contentStackView.topAnchor.constraint(equalTo: contentMessageView.topAnchor, constant: 10),
             contentStackView.leadingAnchor.constraint(equalTo: contentMessageView.leadingAnchor, constant: 7),
             contentStackView.trailingAnchor.constraint(equalTo: contentMessageView.trailingAnchor,constant: -7),

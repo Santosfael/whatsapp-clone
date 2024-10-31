@@ -9,6 +9,7 @@ import UIKit
 
 class CustomGroupPhotoNameNavigationBarView: UIView {
 
+    // MARK: - Private UI Components
     private lazy var photoImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +41,7 @@ class CustomGroupPhotoNameNavigationBarView: UIView {
         return stackView
     }()
 
+    // MARK: - Initialized
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -49,6 +51,7 @@ class CustomGroupPhotoNameNavigationBarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Public Methods
     public func configurationNameAndPhoto(imageUrl: String?, title: String) {
         guard let imageUrl = imageUrl else { return }
         photoImageView.loadImage(from: imageUrl)
@@ -56,6 +59,7 @@ class CustomGroupPhotoNameNavigationBarView: UIView {
     }
 }
 
+// MARK: - Custom Extension
 extension CustomGroupPhotoNameNavigationBarView: ViewCode {
     func buildHierachy() {
         contentStackView.addArrangedSubviews(photoImageView, profileButton)
@@ -64,9 +68,11 @@ extension CustomGroupPhotoNameNavigationBarView: ViewCode {
 
     func setupConstrants() {
         NSLayoutConstraint.activate([
+            // Photo image
             photoImageView.widthAnchor.constraint(equalToConstant: 32),
             photoImageView.heightAnchor.constraint(equalToConstant: 32),
 
+            // Stack View
             contentStackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])

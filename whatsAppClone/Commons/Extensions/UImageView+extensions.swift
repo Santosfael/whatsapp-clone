@@ -9,6 +9,7 @@ import UIKit
 
 extension UIImageView {
 
+    // MARK: - Public Method
     public func loadImage(from url: String) {
         guard let imageURL = URL(string: url) else { return }
 
