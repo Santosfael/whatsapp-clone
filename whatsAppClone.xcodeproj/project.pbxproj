@@ -21,6 +21,12 @@
 		53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */; };
 		53D076AD2CC035B2002F8F75 /* CustomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */; };
 		53D076AF2CC042D2002F8F75 /* CustomBarNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */; };
+		53E737BE2CD404A9008D9FAE /* URLRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737BD2CD404A9008D9FAE /* URLRequestProtocol.swift */; };
+		53E737C02CD404E4008D9FAE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737BF2CD404E4008D9FAE /* HTTPMethod.swift */; };
+		53E737C22CD40560008D9FAE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737C12CD40560008D9FAE /* Request.swift */; };
+		53E737C42CD405E2008D9FAE /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737C32CD405E2008D9FAE /* Environment.swift */; };
+		53E737C72CD40615008D9FAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737C62CD40615008D9FAE /* Constants.swift */; };
+		53E737C92CD4085F008D9FAE /* WhatsAppServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737C82CD4085F008D9FAE /* WhatsAppServiceProtocol.swift */; };
 		53F48CF22CC6E564009A7FAF /* FilterChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F48CF12CC6E564009A7FAF /* FilterChatCollectionView.swift */; };
 		53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5232CBC384200DE6366 /* AppDelegate.swift */; };
 		53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5252CBC384200DE6366 /* SceneDelegate.swift */; };
@@ -33,7 +39,7 @@
 		53F5F5442CBC4C7D00DE6366 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */; };
 		53F5F5462CBC4D2900DE6366 /* UIStackView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */; };
 		53F5F5492CBC57E300DE6366 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5482CBC57E300DE6366 /* Talk.swift */; };
-		53F5F54C2CBC594D00DE6366 /* ApiWhatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F54B2CBC594D00DE6366 /* ApiWhatsApp.swift */; };
+		53F5F54C2CBC594D00DE6366 /* WhatsAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F54B2CBC594D00DE6366 /* WhatsAppService.swift */; };
 		53F5F54E2CBC5F4400DE6366 /* UImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F54D2CBC5F4400DE6366 /* UImageView+extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +58,12 @@
 		53D076A92CC02A65002F8F75 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
 		53D076AC2CC035B2002F8F75 /* CustomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsView.swift; sourceTree = "<group>"; };
 		53D076AE2CC042D2002F8F75 /* CustomBarNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarNavigationButton.swift; sourceTree = "<group>"; };
+		53E737BD2CD404A9008D9FAE /* URLRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestProtocol.swift; sourceTree = "<group>"; };
+		53E737BF2CD404E4008D9FAE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		53E737C12CD40560008D9FAE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		53E737C32CD405E2008D9FAE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		53E737C62CD40615008D9FAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		53E737C82CD4085F008D9FAE /* WhatsAppServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppServiceProtocol.swift; sourceTree = "<group>"; };
 		53F48CF12CC6E564009A7FAF /* FilterChatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChatCollectionView.swift; sourceTree = "<group>"; };
 		53F5F5202CBC384200DE6366 /* whatsAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F5F5232CBC384200DE6366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +78,7 @@
 		53F5F5432CBC4C7D00DE6366 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		53F5F5452CBC4D2900DE6366 /* UIStackView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+extensions.swift"; sourceTree = "<group>"; };
 		53F5F5482CBC57E300DE6366 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
-		53F5F54B2CBC594D00DE6366 /* ApiWhatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWhatsApp.swift; sourceTree = "<group>"; };
+		53F5F54B2CBC594D00DE6366 /* WhatsAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppService.swift; sourceTree = "<group>"; };
 		53F5F54D2CBC5F4400DE6366 /* UImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImageView+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +157,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		53E737BB2CD40459008D9FAE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				53F5F54A2CBC593B00DE6366 /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		53E737BC2CD4047C008D9FAE /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				53E737BD2CD404A9008D9FAE /* URLRequestProtocol.swift */,
+				53E737BF2CD404E4008D9FAE /* HTTPMethod.swift */,
+				53E737C12CD40560008D9FAE /* Request.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		53F48CF02CC6E538009A7FAF /* FilterChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,9 +202,9 @@
 		53F5F5222CBC384200DE6366 /* whatsAppClone */ = {
 			isa = PBXGroup;
 			children = (
+				53E737BB2CD40459008D9FAE /* Network */,
 				538992A52CBDBCAC00FED179 /* Utils */,
 				5393FC9D2CBD8D6400BF22D7 /* Resources */,
-				53F5F54A2CBC593B00DE6366 /* Services */,
 				53F5F5472CBC57CF00DE6366 /* Models */,
 				53F5F53A2CBC3A0200DE6366 /* Commons */,
 				53F5F5382CBC389D00DE6366 /* Scenes */,
@@ -190,6 +220,7 @@
 			children = (
 				53F5F5232CBC384200DE6366 /* AppDelegate.swift */,
 				53F5F5252CBC384200DE6366 /* SceneDelegate.swift */,
+				53E737C32CD405E2008D9FAE /* Environment.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -221,6 +252,7 @@
 			children = (
 				53F5F53F2CBC419D00DE6366 /* Extensions */,
 				53F5F53B2CBC3A1B00DE6366 /* ViewCode.swift */,
+				53E737C62CD40615008D9FAE /* Constants.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -256,7 +288,9 @@
 		53F5F54A2CBC593B00DE6366 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				53F5F54B2CBC594D00DE6366 /* ApiWhatsApp.swift */,
+				53E737BC2CD4047C008D9FAE /* Requests */,
+				53E737C82CD4085F008D9FAE /* WhatsAppServiceProtocol.swift */,
+				53F5F54B2CBC594D00DE6366 /* WhatsAppService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -337,16 +371,22 @@
 				53F48CF22CC6E564009A7FAF /* FilterChatCollectionView.swift in Sources */,
 				532BB43F2CC1848D001D4762 /* NavigationBarButton.swift in Sources */,
 				539051F02CC8099F00ADD262 /* FooterTableView.swift in Sources */,
+				53E737C22CD40560008D9FAE /* Request.swift in Sources */,
 				53D076AD2CC035B2002F8F75 /* CustomButtonsView.swift in Sources */,
-				53F5F54C2CBC594D00DE6366 /* ApiWhatsApp.swift in Sources */,
+				53F5F54C2CBC594D00DE6366 /* WhatsAppService.swift in Sources */,
+				53E737C92CD4085F008D9FAE /* WhatsAppServiceProtocol.swift in Sources */,
+				53E737C72CD40615008D9FAE /* Constants.swift in Sources */,
 				53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */,
 				53F5F5282CBC384200DE6366 /* ChatsViewController.swift in Sources */,
 				5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */,
+				53E737BE2CD404A9008D9FAE /* URLRequestProtocol.swift in Sources */,
 				53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */,
 				539051F72CC82A5100ADD262 /* ChatsViewControllerDelegate.swift in Sources */,
 				5300C4A22CC57ADD000E43EB /* FilterChatCollectionViewCell.swift in Sources */,
 				53F5F54E2CBC5F4400DE6366 /* UImageView+extensions.swift in Sources */,
+				53E737C02CD404E4008D9FAE /* HTTPMethod.swift in Sources */,
 				53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */,
+				53E737C42CD405E2008D9FAE /* Environment.swift in Sources */,
 				53F5F5492CBC57E300DE6366 /* Talk.swift in Sources */,
 				53F5F5422CBC434800DE6366 /* ChatTableViewCell.swift in Sources */,
 				5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */,

@@ -44,7 +44,7 @@ class ChatsView: UIView {
 
     // MARK: - Privates Methods
     private func getTalks() {
-        Service.shared.getChat { result in
+        WhatsAppService.shared.chat { result in
             switch result {
             case .success(let response):
                 self.talks = response
