@@ -14,11 +14,23 @@ class ChatsViewController: UIViewController {
     private let buttonsNavigation = CustomButtonsView()
     private lazy var searchController = UISearchController(searchResultsController: nil)
 
+    private var numberUnreadTalk: String = "" {
+        didSet {
+            DispatchQueue.main.sync {
+                self.configureTabBarController()
+            }
+        }
+    }
+
+    // MARK: - Public Properties
+    public var viewModel: ChatsViewModelProtocol?
+
     // MARK: - Lifecycle
     override func loadView() {
         super.loadView()
         view = content
         content.delegate = self
+        content.getTalks()
     }
 
     override func viewDidLoad() {
@@ -46,6 +58,11 @@ class ChatsViewController: UIViewController {
         appearanceNavigationBar()
     }
 
+    private func configureTabBarController() {
+        tabBarController?.tabBar.items?[3].badgeValue = numberUnreadTalk
+        tabBarController?.tabBar.items?[3].badgeColor = Colors.ternaryColor
+    }
+
     private func appearanceNavigationBar() {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: Colors.secondaryColor
@@ -59,8 +76,21 @@ class ChatsViewController: UIViewController {
 
 // MARK: - Custom Extension
 extension ChatsViewController: ChatsViewControllerDelegate {
+
     func chatMessageUser(user: Talk) {
         let messagesViewController = MessagesViewController(user: user)
         navigationController?.pushViewController(messagesViewController, animated: true)
+    }
+
+    func listChats(completion: @escaping completion){
+        viewModel?.listChat(handler: completion)
+    }
+
+    func listUnreadTalk(talks: [Talk], filter: String) -> [Talk]? {
+        return viewModel?.listUnreadChat(talks: talks, filter: filter)
+    }
+
+    func getNumberUnreadTalk(numberUnread: Int) {
+        numberUnreadTalk = "\(numberUnread)"
     }
 }

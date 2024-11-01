@@ -15,7 +15,7 @@ enum Request: URLRequestProtocol {
     }
 
     var path: String {
-        return "/v3/d5023289-30f0-4785-86c8-4496b1500dae"
+        return "/v3/584d7967-557f-4b08-a4c6-782a9a00fe35"
     }
 
     var query: String {

@@ -11,6 +11,7 @@
 		532BB43F2CC1848D001D4762 /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */; };
 		53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53881D8D2CBDA6B200C5D4FE /* Colors.swift */; };
 		538992A32CBDB62400FED179 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538992A22CBDB62400FED179 /* TabBarItem.swift */; };
+		538F64ED2CD53B0200ECE7A9 /* FilterChatCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F64EC2CD53B0200ECE7A9 /* FilterChatCollectionViewDelegate.swift */; };
 		539051F02CC8099F00ADD262 /* FooterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051EF2CC8099F00ADD262 /* FooterTableView.swift */; };
 		539051F32CC8289000ADD262 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051F22CC8289000ADD262 /* MessagesViewController.swift */; };
 		539051F72CC82A5100ADD262 /* ChatsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */; };
@@ -27,6 +28,8 @@
 		53E737C42CD405E2008D9FAE /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737C32CD405E2008D9FAE /* Environment.swift */; };
 		53E737C72CD40615008D9FAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737C62CD40615008D9FAE /* Constants.swift */; };
 		53E737C92CD4085F008D9FAE /* WhatsAppServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737C82CD4085F008D9FAE /* WhatsAppServiceProtocol.swift */; };
+		53E737CC2CD41CA4008D9FAE /* ChatsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737CB2CD41CA4008D9FAE /* ChatsViewModelProtocol.swift */; };
+		53E737CE2CD41D2D008D9FAE /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E737CD2CD41D2D008D9FAE /* ChatsViewModel.swift */; };
 		53F48CF22CC6E564009A7FAF /* FilterChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F48CF12CC6E564009A7FAF /* FilterChatCollectionView.swift */; };
 		53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5232CBC384200DE6366 /* AppDelegate.swift */; };
 		53F5F5262CBC384200DE6366 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5F5252CBC384200DE6366 /* SceneDelegate.swift */; };
@@ -48,6 +51,7 @@
 		532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
 		53881D8D2CBDA6B200C5D4FE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		538992A22CBDB62400FED179 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		538F64EC2CD53B0200ECE7A9 /* FilterChatCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChatCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		539051EF2CC8099F00ADD262 /* FooterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTableView.swift; sourceTree = "<group>"; };
 		539051F22CC8289000ADD262 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		53E737C32CD405E2008D9FAE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		53E737C62CD40615008D9FAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		53E737C82CD4085F008D9FAE /* WhatsAppServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppServiceProtocol.swift; sourceTree = "<group>"; };
+		53E737CB2CD41CA4008D9FAE /* ChatsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModelProtocol.swift; sourceTree = "<group>"; };
+		53E737CD2CD41D2D008D9FAE /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
 		53F48CF12CC6E564009A7FAF /* FilterChatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChatCollectionView.swift; sourceTree = "<group>"; };
 		53F5F5202CBC384200DE6366 /* whatsAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F5F5232CBC384200DE6366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */,
+				538F64EC2CD53B0200ECE7A9 /* FilterChatCollectionViewDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -175,6 +182,23 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		53E737CA2CD41C97008D9FAE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				53E737CF2CD41D30008D9FAE /* Chats */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		53E737CF2CD41D30008D9FAE /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				53E737CB2CD41CA4008D9FAE /* ChatsViewModelProtocol.swift */,
+				53E737CD2CD41D2D008D9FAE /* ChatsViewModel.swift */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
 		53F48CF02CC6E538009A7FAF /* FilterChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +226,7 @@
 		53F5F5222CBC384200DE6366 /* whatsAppClone */ = {
 			isa = PBXGroup;
 			children = (
+				53E737CA2CD41C97008D9FAE /* ViewModels */,
 				53E737BB2CD40459008D9FAE /* Network */,
 				538992A52CBDBCAC00FED179 /* Utils */,
 				5393FC9D2CBD8D6400BF22D7 /* Resources */,
@@ -378,9 +403,11 @@
 				53E737C72CD40615008D9FAE /* Constants.swift in Sources */,
 				53881D8E2CBDA6B200C5D4FE /* Colors.swift in Sources */,
 				53F5F5282CBC384200DE6366 /* ChatsViewController.swift in Sources */,
+				538F64ED2CD53B0200ECE7A9 /* FilterChatCollectionViewDelegate.swift in Sources */,
 				5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */,
 				53E737BE2CD404A9008D9FAE /* URLRequestProtocol.swift in Sources */,
 				53F5F5242CBC384200DE6366 /* AppDelegate.swift in Sources */,
+				53E737CE2CD41D2D008D9FAE /* ChatsViewModel.swift in Sources */,
 				539051F72CC82A5100ADD262 /* ChatsViewControllerDelegate.swift in Sources */,
 				5300C4A22CC57ADD000E43EB /* FilterChatCollectionViewCell.swift in Sources */,
 				53F5F54E2CBC5F4400DE6366 /* UImageView+extensions.swift in Sources */,
@@ -395,6 +422,7 @@
 				53F5F53E2CBC3AE800DE6366 /* ChatsView.swift in Sources */,
 				53F5F53C2CBC3A1B00DE6366 /* ViewCode.swift in Sources */,
 				53D076AA2CC02A65002F8F75 /* UIImage+extensions.swift in Sources */,
+				53E737CC2CD41CA4008D9FAE /* ChatsViewModelProtocol.swift in Sources */,
 				53BD41422CC9865700CDCD76 /* MessagesView.swift in Sources */,
 				539051F32CC8289000ADD262 /* MessagesViewController.swift in Sources */,
 			);

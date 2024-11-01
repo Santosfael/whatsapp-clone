@@ -17,4 +17,5 @@ struct Talk: Codable {
     var picture: String
     let latest_timestamp: String
     let lastChat: String
+    let unread: Bool
 }

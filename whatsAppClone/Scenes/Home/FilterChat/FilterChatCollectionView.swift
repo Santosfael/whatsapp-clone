@@ -13,6 +13,9 @@ final class FilterChatCollectionView: UIView {
     private let filterOptions: [String] = ["All", "Unread", "Favourites", "Groups"]
     private var selectedFilterItem: Int = 0
 
+    // MARK: - Public Delegate
+    public var delegate: FilterChatCollectionViewDelegate?
+
     // MARK: - Private UI Components
     private lazy var filterChatCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -82,6 +85,7 @@ extension FilterChatCollectionView: ViewCode {
 extension FilterChatCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedFilterItem = indexPath.item
+        delegate?.filterChat(filter: filterOptions[indexPath.row].lowercased())
         collectionView.reloadData()
     }
 }

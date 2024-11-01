@@ -22,10 +22,19 @@ class ChatsView: UIView {
         }
     }
 
+    private lazy var talksTemp = [Talk]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.chatsTableView.reloadData()
+            }
+        }
+    }
+
     // MARK: - Private UI Components
     private lazy var chatsTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.showsVerticalScrollIndicator = false
         return tableView
     }()
 
@@ -42,18 +51,21 @@ class ChatsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Privates Methods
-    private func getTalks() {
-        WhatsAppService.shared.chat { result in
+    // MARK: - Public Methods
+    public func getTalks() {
+        delegate?.listChats(completion: { result in
             switch result {
-            case .success(let response):
-                self.talks = response
+            case .success(let talks):
+                self.talks = talks
+                self.talksTemp = talks
+                self.delegate?.getNumberUnreadTalk(numberUnread: talks.filter({$0.unread == true}).count)
             case .failure(let error):
                 print(error.localizedDescription)
             }
-        }
+        })
     }
 
+    // MARK: - Privates Methods
     private func configureTableView() {
         chatsTableView.delegate = self
         chatsTableView.dataSource = self
@@ -92,7 +104,7 @@ extension ChatsView: ViewCode {
         backgroundColor = .systemBackground
         configureTableView()
         configureFooterTableView()
-        getTalks()
+        filterHeaderView.delegate = self
     }
 }
 
@@ -126,5 +138,14 @@ extension ChatsView: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.chatMessageUser(user: talks[indexPath.row])
+    }
+}
+
+// MARK: - Custom Extension Filter Chat
+extension ChatsView: FilterChatCollectionViewDelegate {
+    func filterChat(filter: String) {
+        if let talks = delegate?.listUnreadTalk(talks: talksTemp, filter: filter) {
+            self.talks = talks
+        }
     }
 }

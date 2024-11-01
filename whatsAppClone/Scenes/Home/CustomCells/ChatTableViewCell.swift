@@ -83,6 +83,11 @@ class ChatTableViewCell: UITableViewCell {
         nameLabel.text = talk.name
         dateLabel.text = talk.latest_timestamp
         talkLabel.text = talk.lastChat
+        if talk.unread == true {
+            dateLabel.textColor = Colors.ternaryColor
+        } else if talk.unread == false {
+            dateLabel.textColor = Colors.primaryColor
+        }
     }
 }
 
@@ -105,12 +110,11 @@ extension ChatTableViewCell: ViewCode {
             // Vertical Stack
             containerVerticalStack.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             containerVerticalStack.leadingAnchor.constraint(equalTo: personImageView.trailingAnchor, constant: 12),
-            containerVerticalStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
+            containerVerticalStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             containerVerticalStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
     
     func applyAdditionalChanges() {
-        accessoryType = .disclosureIndicator
     }
 }

@@ -9,4 +9,7 @@ import Foundation
 
 protocol ChatsViewControllerDelegate: AnyObject {
     func chatMessageUser(user: Talk)
+    func listChats(completion: @escaping completion)
+    func listUnreadTalk(talks: [Talk], filter: String) -> [Talk]?
+    func getNumberUnreadTalk(numberUnread: Int)
 }
