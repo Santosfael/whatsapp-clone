@@ -8,7 +8,11 @@
 import Foundation
 
 class WhatsAppService: WhatsAppServiceProtocol {
-    let session = URLSession.shared
+    let session: URLSession
+
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
 
     static let shared: WhatsAppService = {
         let instance = WhatsAppService()

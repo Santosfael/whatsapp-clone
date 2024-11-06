@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5300C4A22CC57ADD000E43EB /* FilterChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5300C4A12CC57ADD000E43EB /* FilterChatCollectionViewCell.swift */; };
 		532BB43F2CC1848D001D4762 /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */; };
+		533276D22CDBB511003BAFFA /* WhatsAppServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533276D12CDBB511003BAFFA /* WhatsAppServiceTests.swift */; };
+		533276D52CDBD90C003BAFFA /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533276D42CDBD90C003BAFFA /* URLProtocolMock.swift */; };
+		533276D82CDC0FE7003BAFFA /* JsonStringChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533276D72CDC0FE7003BAFFA /* JsonStringChatResponse.swift */; };
 		53352B332CDA8E3F00886AB0 /* WhatsAppServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53352B322CDA8E3F00886AB0 /* WhatsAppServiceSpy.swift */; };
 		53352B382CDA9AD900886AB0 /* TalkFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53352B372CDA9AD900886AB0 /* TalkFixtures.swift */; };
 		5365FDE02CDA8D5600E5CCE3 /* ChatsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365FDDF2CDA8D5600E5CCE3 /* ChatsViewModelTests.swift */; };
@@ -62,6 +65,9 @@
 /* Begin PBXFileReference section */
 		5300C4A12CC57ADD000E43EB /* FilterChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		532BB43E2CC1848D001D4762 /* NavigationBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
+		533276D12CDBB511003BAFFA /* WhatsAppServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WhatsAppServiceTests.swift; path = ../../../../../../WhatsAppServiceTests.swift; sourceTree = "<group>"; };
+		533276D42CDBD90C003BAFFA /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLProtocolMock.swift; path = ../../../../../../URLProtocolMock.swift; sourceTree = "<group>"; };
+		533276D72CDC0FE7003BAFFA /* JsonStringChatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JsonStringChatResponse.swift; path = ../../../../../../JsonStringChatResponse.swift; sourceTree = "<group>"; };
 		53352B322CDA8E3F00886AB0 /* WhatsAppServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppServiceSpy.swift; sourceTree = "<group>"; };
 		53352B372CDA9AD900886AB0 /* TalkFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkFixtures.swift; sourceTree = "<group>"; };
 		5365FDDF2CDA8D5600E5CCE3 /* ChatsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModelTests.swift; sourceTree = "<group>"; };
@@ -123,6 +129,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		533276CF2CDBB4FE003BAFFA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				533276D62CDC0F6E003BAFFA /* Fixture */,
+				533276D32CDBD8F4003BAFFA /* Mocks */,
+				533276D02CDBB506003BAFFA /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		533276D02CDBB506003BAFFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				533276D12CDBB511003BAFFA /* WhatsAppServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		533276D32CDBD8F4003BAFFA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				533276D42CDBD90C003BAFFA /* URLProtocolMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		533276D62CDC0F6E003BAFFA /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				533276D72CDC0FE7003BAFFA /* JsonStringChatResponse.swift */,
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
 		53352B342CDA9AAE00886AB0 /* Fixture */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +253,7 @@
 		5394C51F2CD94A1A00B02739 /* whatsAppCloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				533276CF2CDBB4FE003BAFFA /* Network */,
 				5365FDDD2CDA8D2C00E5CCE3 /* ViewModels */,
 			);
 			path = whatsAppCloneTests;
@@ -488,8 +529,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533276D52CDBD90C003BAFFA /* URLProtocolMock.swift in Sources */,
 				5365FDE02CDA8D5600E5CCE3 /* ChatsViewModelTests.swift in Sources */,
+				533276D22CDBB511003BAFFA /* WhatsAppServiceTests.swift in Sources */,
 				53352B332CDA8E3F00886AB0 /* WhatsAppServiceSpy.swift in Sources */,
+				533276D82CDC0FE7003BAFFA /* JsonStringChatResponse.swift in Sources */,
 				53352B382CDA9AD900886AB0 /* TalkFixtures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

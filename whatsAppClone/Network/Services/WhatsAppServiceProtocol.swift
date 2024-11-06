@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum WhatsAppError: Error {
+enum WhatsAppError: Error, Equatable {
     case error(String)
     case urlInvalid
     case noDataAvaliable
