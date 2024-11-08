@@ -137,7 +137,7 @@ extension MessagesView: ViewCode {
             // Content Message
             contentMessageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             contentMessageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            // Altera o bootm da contentMessageView caso o teclado apareca
+            // Altera o bottom da contentMessageView caso o teclado apareca
             bottomConstraint ?? contentMessageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             contentMessageView.heightAnchor.constraint(equalToConstant: 76),
 
