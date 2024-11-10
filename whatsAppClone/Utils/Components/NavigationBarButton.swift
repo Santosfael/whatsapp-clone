@@ -20,13 +20,13 @@ enum NavigationBarButton {
         case .primaryButton(let image, let targetSize, let backgroundColor):
             return CustomBarNavigationButton.createCustomButton(image: UIImage.resizeImage(image: image,
                                                                                            targetSize: targetSize),
-                                                                tintColor: Colors.secondaryColor,
+                                                                tintColor: Colors.iconPrimary,
                                                                 size: CGSize(width: 28, height: 28),
                                                                 backgroundColor: backgroundColor)
 
         case .secondaryButton(let image, let size):
             lazy var button = CustomBarNavigationButton.createCustomButton(image: image,
-                                                                           tintColor: Colors.ternaryColor,
+                                                                           tintColor: Colors.surfaceProduct,
                                                                            size: size)
             button.contentVerticalAlignment = .fill
             button.contentHorizontalAlignment = .fill

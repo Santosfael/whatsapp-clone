@@ -34,11 +34,11 @@ class FilterChatCollectionViewCell: UICollectionViewCell {
     // MARK: - Public Methods
     public func setSelectedState(isSelected: Bool) {
         if isSelected {
-            contentView.backgroundColor = Colors.backgroundGreenLight
-            titleLabel.textColor = Colors.textColorGreen
+            contentView.backgroundColor = Colors.surfaceCtaFiltersActive
+            titleLabel.textColor = Colors.textCtaFiltersActive
         } else {
-            contentView.backgroundColor = Colors.backgroundGrayLight
-            titleLabel.textColor = Colors.textColorGrayLight
+            contentView.backgroundColor = Colors.surfaceCtaFilters
+            titleLabel.textColor = Colors.textCtaFilters
         }
     }
 

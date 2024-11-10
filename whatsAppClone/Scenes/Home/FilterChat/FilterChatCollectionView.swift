@@ -70,7 +70,7 @@ extension FilterChatCollectionView: ViewCode {
     func setupConstrants() {
         NSLayoutConstraint.activate([
             filterChatCollectionView.topAnchor.constraint(equalTo: topAnchor),
-            filterChatCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            filterChatCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -10),
             filterChatCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             filterChatCollectionView.heightAnchor.constraint(equalToConstant: 50)
         ])

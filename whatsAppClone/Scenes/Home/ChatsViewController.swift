@@ -52,21 +52,32 @@ class ChatsViewController: UIViewController {
     // MARK: - Private Methods
     private func configureNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.cameraFill, backgroundColor: Colors.backgroundGrayLight8), .secondaryButton(image: Images.plusFill)])
-        navigationItem.leftBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.meetballMenu)])
+        navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.cameraFill, backgroundColor: Colors.surfaceCtaCircular), .secondaryButton(image: Images.plusFill)])
+        navigationItem.leftBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.primaryButton(image: Images.meetballMenu, backgroundColor: Colors.surfaceCtaCircular)])
         navigationItem.searchController = searchController
         appearanceNavigationBar()
     }
 
     private func configureTabBarController() {
         tabBarController?.tabBar.items?[3].badgeValue = numberUnreadTalk
-        tabBarController?.tabBar.items?[3].badgeColor = Colors.ternaryColor
+        tabBarController?.tabBar.items?[3].badgeColor = Colors.surfaceProduct
     }
 
     private func appearanceNavigationBar() {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: Colors.secondaryColor
+            NSAttributedString.Key.foregroundColor: Colors.ternaryColor
         ], for: .normal)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.greenLight]
+
+        let appearance = UINavigationBarAppearance()
+        guard let textPrimaryColor = Colors.textPrimary else { return }
+        appearance.titleTextAttributes = [.foregroundColor: textPrimaryColor]
+        appearance.backgroundColor = .systemBackground
+        appearance.largeTitleTextAttributes = [.foregroundColor: textPrimaryColor]
+
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 
     @objc private func popupInfo() {

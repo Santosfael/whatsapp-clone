@@ -45,6 +45,7 @@ class ChatTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.text = "Rafael"
+        label.textColor = Colors.textPrimary
         return label
     }()
 
@@ -52,7 +53,7 @@ class ChatTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = .gray
+        label.textColor = Colors.textSecondary
         label.text = "11/01/2022"
         return label
     }()
@@ -61,7 +62,7 @@ class ChatTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .gray
+        label.textColor = Colors.textSecondary
         label.numberOfLines = 2
         label.text = "Actually I wanted to check with you about your online business plan on our textexte raafaf taasad"
         return label
@@ -84,9 +85,9 @@ class ChatTableViewCell: UITableViewCell {
         dateLabel.text = talk.latest_timestamp
         talkLabel.text = talk.lastChat
         if talk.unread == true {
-            dateLabel.textColor = Colors.ternaryColor
+            dateLabel.textColor = Colors.textProduct
         } else if talk.unread == false {
-            dateLabel.textColor = Colors.primaryColor
+            dateLabel.textColor = Colors.textSecondary
         }
     }
 }

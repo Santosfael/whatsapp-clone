@@ -14,7 +14,7 @@ final class FooterTableView: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(systemName: "lock.fill")
-        image.tintColor = Colors.primaryColor
+        image.tintColor = Colors.iconSecondary
         return image
     }()
 
@@ -22,7 +22,7 @@ final class FooterTableView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Your personal messages are"
-        label.textColor = Colors.primaryColor
+        label.textColor = Colors.textProduct
         label.font = UIFont.systemFont(ofSize: 11)
         return label
     }()
@@ -31,7 +31,7 @@ final class FooterTableView: UIView {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("end-to-end encrypted.", for: .normal)
-        button.setTitleColor(Colors.ternaryColor, for: .normal)
+        button.setTitleColor(Colors.textProduct, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 11)
         button.addTarget(self, action: #selector(encryptInfo), for: .touchUpInside)
         return button

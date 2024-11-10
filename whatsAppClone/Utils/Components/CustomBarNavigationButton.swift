@@ -19,7 +19,7 @@ class CustomBarNavigationButton: UIButton {
     }
     
     // MARK: - Static Methods
-    static func createCustomButton(image: UIImage?, tintColor: UIColor, size: CGSize, backgroundColor: UIColor? = nil) -> UIButton {
+    static func createCustomButton(image: UIImage?, tintColor: UIColor?, size: CGSize, backgroundColor: UIColor? = nil) -> UIButton {
         let button = UIButton(type: .system)
         button.setImage(image, for: .normal)
         button.tintColor = tintColor

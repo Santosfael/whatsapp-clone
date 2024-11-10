@@ -101,7 +101,7 @@ extension ChatsView: ViewCode {
     }
     
     func applyAdditionalChanges() {
-        backgroundColor = .systemBackground
+        backgroundColor = Colors.surfacePrimary
         configureTableView()
         configureFooterTableView()
         filterHeaderView.delegate = self
