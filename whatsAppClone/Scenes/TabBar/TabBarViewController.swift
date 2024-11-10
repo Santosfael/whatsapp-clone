@@ -64,8 +64,11 @@ class TabBarViewController: UITabBarController {
 
     /// Appearance
     private func setupTabBarAppearance() {
-        self.tabBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
-        self.tabBar.tintColor = Colors.secondaryColor
-        self.tabBar.unselectedItemTintColor = Colors.primaryColor
+        self.tabBar.backgroundColor = Colors.surfacePanel
+        self.tabBar.tintColor = Colors.iconTabBarSelected
+        self.tabBar.unselectedItemTintColor = Colors.iconTabBar
+        let lineView = UIView(frame: CGRect(x: 0, y: 0, width: self.tabBar.frame.size.width, height: 0.5))
+        lineView.backgroundColor = Colors.borderPanel
+        self.tabBar.addSubview(lineView)
     }
 }
