@@ -64,11 +64,6 @@ class ChatsViewController: UIViewController {
     }
 
     private func appearanceNavigationBar() {
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: Colors.ternaryColor
-        ], for: .normal)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.greenLight]
-
         let appearance = UINavigationBarAppearance()
         guard let textPrimaryColor = Colors.textPrimary else { return }
         appearance.titleTextAttributes = [.foregroundColor: textPrimaryColor]
