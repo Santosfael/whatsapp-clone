@@ -364,12 +364,12 @@
 			children = (
 				539051F12CC8287200ADD262 /* Messages */,
 				538992A12CBDB60200FED179 /* TabBar */,
-				53F5F5392CBC38A900DE6366 /* Home */,
+				53F5F5392CBC38A900DE6366 /* Chats */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		53F5F5392CBC38A900DE6366 /* Home */ = {
+		53F5F5392CBC38A900DE6366 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
 				539051F52CC82A3D00ADD262 /* Delegates */,
@@ -378,7 +378,7 @@
 				53F5F5272CBC384200DE6366 /* ChatsViewController.swift */,
 				53F5F53D2CBC3AE800DE6366 /* ChatsView.swift */,
 			);
-			path = Home;
+			path = Chats;
 			sourceTree = "<group>";
 		};
 		53F5F53A2CBC3A0200DE6366 /* Commons */ = {
