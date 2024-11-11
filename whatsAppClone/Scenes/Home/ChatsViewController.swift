@@ -59,8 +59,10 @@ class ChatsViewController: UIViewController {
     }
 
     private func configureTabBarController() {
+        guard let textInvertColor = Colors.textInvert else { return }
         tabBarController?.tabBar.items?[3].badgeValue = numberUnreadTalk
         tabBarController?.tabBar.items?[3].badgeColor = Colors.surfaceProduct
+        tabBarController?.tabBar.items?[3].setBadgeTextAttributes([NSAttributedString.Key.foregroundColor: textInvertColor], for: .normal)
     }
 
     private func appearanceNavigationBar() {
