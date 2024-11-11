@@ -12,7 +12,7 @@ enum NavigationBarButton {
     case primaryButton(image: UIImage?, targetSize: CGSize = CGSize(width: 20, height: 20), backgroundColor: UIColor? = nil)
     case secondaryButton(image: UIImage?, size: CGSize = CGSize(width: 28, height: 28))
     case ternaryButton(title: String, backgroundColor: UIColor?)
-    case defaultButton(image: UIImage?, targetSize: CGSize = CGSize(width: 20, height: 20), tintColor: UIColor)
+    case defaultButton(image: UIImage?, targetSize: CGSize = CGSize(width: 20, height: 20), tintColor: UIColor?)
 
     // MARK: - Public Methods
     func createButton() -> UIButton {

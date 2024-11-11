@@ -13,13 +13,8 @@ class MessagesView: UIView {
     private var bottomConstraint: NSLayoutConstraint?
 
     // MARK: - Private UI Components
-    private lazy var plusImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = Images.plus
-        image.tintColor = UIColor.black
-        return image
-    }()
+    private lazy var plusImageButton = CustomBarNavigationButton.createCustomButton(image: Images.plus, tintColor: Colors.iconPrimary, size: CGSize(width: 32, height: 32))
+
 
     private lazy var messageTextField: UITextField = {
         let textField = UITextField()
@@ -31,7 +26,8 @@ class MessagesView: UIView {
         textField.layer.masksToBounds = true
         textField.leftViewMode = .always
         textField.leftView = .init(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
-        textField.layer.borderColor = Colors.borderColor.cgColor
+        textField.layer.borderColor = Colors.borderInputChat?.cgColor
+        textField.backgroundColor = Colors.surfaceInputChat
 
         let button = UIButton(type: .custom)
         textField.rightViewMode = .always
@@ -42,25 +38,26 @@ class MessagesView: UIView {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(Images.sticker, for: .normal)
+        button.imageView?.tintColor = Colors.iconPrimary
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
         button.frame = CGRect(x: CGFloat(messageTextField.frame.size.width - 25), y: CGFloat(5), width: CGFloat(24), height: CGFloat(24))
         return button
     }()
 
-    private lazy var cameraImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = Images.camera
-        image.tintColor = Colors.ternaryColor
-        return image
+    private lazy var cameraImageButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(Images.camera, for: .normal)
+        button.imageView?.tintColor = Colors.iconPrimary
+        return button
     }()
 
-    private lazy var micImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = Images.mic
-        image.tintColor = Colors.ternaryColor
-        return image
+    private lazy var micImageButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(Images.mic, for: .normal)
+        button.imageView?.tintColor = Colors.iconPrimary
+        return button
     }()
 
     private lazy var contentStackView: UIStackView = {
@@ -76,7 +73,7 @@ class MessagesView: UIView {
     private lazy var contentMessageView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = Colors.backgroundGrayLight
+        view.backgroundColor = Colors.surfacePanel
         return view
     }()
 
@@ -127,7 +124,7 @@ class MessagesView: UIView {
 extension MessagesView: ViewCode {
     func buildHierachy() {
         addSubview(contentMessageView)
-        contentStackView.addArrangedSubviews(plusImage, messageTextField, cameraImage, micImage)
+        contentStackView.addArrangedSubviews(plusImageButton, messageTextField, cameraImageButton, micImageButton)
         contentMessageView.addSubview(contentStackView)
     }
 
@@ -141,10 +138,6 @@ extension MessagesView: ViewCode {
             bottomConstraint ?? contentMessageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             contentMessageView.heightAnchor.constraint(equalToConstant: 76),
 
-            // Icon Image
-            plusImage.widthAnchor.constraint(equalToConstant: 32),
-            plusImage.heightAnchor.constraint(equalToConstant: 32),
-
             // Content Stack View
             contentStackView.topAnchor.constraint(equalTo: contentMessageView.topAnchor, constant: 10),
             contentStackView.leadingAnchor.constraint(equalTo: contentMessageView.leadingAnchor, constant: 7),
@@ -157,7 +150,7 @@ extension MessagesView: ViewCode {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = Images.chatBackgroundImage
         backgroundImage.contentMode = .scaleAspectFill
-        backgroundImage.backgroundColor = Colors.chatBackgroundColor
+        backgroundImage.backgroundColor = Colors.borderReaction
         self.insertSubview(backgroundImage, at: 0)
         messageTextField.delegate = self
     }

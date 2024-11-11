@@ -31,7 +31,7 @@ class MessagesViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.backgroundColor = .systemBackground
+        self.navigationController?.navigationBar.backgroundColor = Colors.surfacePanel
         self.navigationItem.largeTitleDisplayMode = .always
     }
 
@@ -48,7 +48,7 @@ class MessagesViewController: UIViewController {
     // MARK: - Private Methods actions
     private func configureNavigationBar() {
 
-        navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.defaultButton(image: Images.video, targetSize: CGSize(width: 32, height: 32), tintColor: Colors.secondaryColor), .defaultButton(image: Images.phone, targetSize: CGSize(width: 32, height: 32), tintColor:  Colors.secondaryColor)])
+        navigationItem.rightBarButtonItem = buttonsNavigation.addBarButtonsItems(buttonTypes: [.defaultButton(image: Images.video, targetSize: CGSize(width: 32, height: 32), tintColor: Colors.iconPrimary), .defaultButton(image: Images.phone, targetSize: CGSize(width: 32, height: 32), tintColor:  Colors.iconPrimary)])
 
         navigationItem.leftBarButtonItems = [
             UIBarButtonItem(image: Images.chevronLeft,
@@ -57,7 +57,7 @@ class MessagesViewController: UIViewController {
                             action: #selector(backButtonTapped)),
             UIBarButtonItem(customView: customGroupPhotoAndNameNavigationBar)
         ]
-        navigationItem.leftBarButtonItem?.tintColor = Colors.secondaryColor
+        navigationItem.leftBarButtonItem?.tintColor = Colors.iconPrimary
     }
 
     @objc private func backButtonTapped() {
@@ -68,7 +68,7 @@ class MessagesViewController: UIViewController {
     private func configureAppearanceBar() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = Colors.backgroundGrayLight
+        appearance.backgroundColor = Colors.surfacePanel
         self.navigationItem.standardAppearance = appearance
         self.navigationItem.scrollEdgeAppearance = appearance
     }

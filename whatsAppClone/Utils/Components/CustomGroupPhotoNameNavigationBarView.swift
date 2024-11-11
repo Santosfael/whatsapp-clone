@@ -23,10 +23,10 @@ class CustomGroupPhotoNameNavigationBarView: UIView {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        button.tintColor = Colors.secondaryColor
+        button.tintColor = Colors.textPrimary
         if #available(iOS 15.0, *) {
             button.subtitleLabel?.text = "tap here for contact info"
-            button.subtitleLabel?.textColor = Colors.primaryColor
+            button.subtitleLabel?.textColor = Colors.textSecondaryAlpha
             button.subtitleLabel?.font = UIFont.systemFont(ofSize: 12)
         }
         return button
