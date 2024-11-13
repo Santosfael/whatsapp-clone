@@ -35,7 +35,6 @@ class ChatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Chats"
     }
 
     override func viewWillAppear(_ animated: Bool) {

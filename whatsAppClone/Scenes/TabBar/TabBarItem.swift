@@ -16,26 +16,6 @@ enum TabBarItem {
     case chats
     case settings
 
-    // MARK: - ViewControllers
-    var viewController: UIViewController {
-        switch self {
-        case .updates:
-            return UINavigationController(rootViewController: UpdatesViewController())
-        case .calls:
-            return UINavigationController(rootViewController: CallViewController())
-        case .communities:
-            return UINavigationController(rootViewController: CommunitiesViewController())
-        case .chats:
-            let service = WhatsAppService()
-            let viewModel = ChatsViewModel(whatsAppService: service)
-            let chatsViewController = ChatsViewController()
-            chatsViewController.viewModel = viewModel
-            return UINavigationController(rootViewController: chatsViewController)
-        case .settings:
-            return UINavigationController(rootViewController: SettingsViewController())
-        }
-    }
-
     // MARK: - Titles
     var title: String {
         switch self {

@@ -13,15 +13,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     // MARK: - private variables
-    private let tabBarViewController = TabBarViewController()
+    private var appCoordinator: AppCoordinator?
 
     // MARK: - Default Funtions
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        tabBarViewController.navigationController?.navigationBar.backgroundColor = .systemBackground
+        let navigationController = UINavigationController()
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = tabBarViewController
-        window?.makeKeyAndVisible()
+        guard let window = window else { return }
+        appCoordinator = AppCoordinator(navigationController: navigationController, window: window, isUserLoggedIn: true)
+        appCoordinator?.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
