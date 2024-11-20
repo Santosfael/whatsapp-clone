@@ -29,7 +29,7 @@
 		539051F02CC8099F00ADD262 /* FooterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051EF2CC8099F00ADD262 /* FooterTableView.swift */; };
 		539051F32CC8289000ADD262 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051F22CC8289000ADD262 /* MessagesViewController.swift */; };
 		539051F72CC82A5100ADD262 /* ChatsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */; };
-		5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */; };
+		5393FC9C2CBD810E00BF22D7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9B2CBD810E00BF22D7 /* TabBarController.swift */; };
 		5393FC9F2CBD92C800BF22D7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393FC9E2CBD92C800BF22D7 /* Images.swift */; };
 		53BD41402CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BD413F2CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift */; };
 		53BD41422CC9865700CDCD76 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BD41412CC9865700CDCD76 /* MessagesView.swift */; };
@@ -99,7 +99,7 @@
 		539051EF2CC8099F00ADD262 /* FooterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTableView.swift; sourceTree = "<group>"; };
 		539051F22CC8289000ADD262 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		539051F62CC82A5100ADD262 /* ChatsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewControllerDelegate.swift; sourceTree = "<group>"; };
-		5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5393FC9B2CBD810E00BF22D7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5393FC9E2CBD92C800BF22D7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		5394C51E2CD94A1A00B02739 /* whatsAppCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsAppCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BD413F2CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupPhotoNameNavigationBarView.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 		538992A12CBDB60200FED179 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				5393FC9B2CBD810E00BF22D7 /* TabBarViewController.swift */,
+				5393FC9B2CBD810E00BF22D7 /* TabBarController.swift */,
 				538992A22CBDB62400FED179 /* TabBarItem.swift */,
 			);
 			path = TabBar;
@@ -736,7 +736,7 @@
 				53F5F5492CBC57E300DE6366 /* Talk.swift in Sources */,
 				532B7A402CE4066100941826 /* SettingsCoordinator.swift in Sources */,
 				53F5F5422CBC434800DE6366 /* ChatTableViewCell.swift in Sources */,
-				5393FC9C2CBD810E00BF22D7 /* TabBarViewController.swift in Sources */,
+				5393FC9C2CBD810E00BF22D7 /* TabBarController.swift in Sources */,
 				538992A32CBDB62400FED179 /* TabBarItem.swift in Sources */,
 				53BD41402CC96D5D00CDCD76 /* CustomGroupPhotoNameNavigationBarView.swift in Sources */,
 				53F5F53E2CBC3AE800DE6366 /* ChatsView.swift in Sources */,

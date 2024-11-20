@@ -48,11 +48,6 @@ class TabBarController: UITabBarController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
-    // MARK: - Public Methods
-    override func setViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {
-        super.setViewControllers(viewControllers, animated: animated)
-    }
-
     // MARK: - Private Methods
     /// Appearance
     private func setupTabBarAppearance() {
