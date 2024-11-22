@@ -3,7 +3,7 @@
 Este projeto é um clone do WhatsApp, desenvolvido em **Swift** utilizando **UIKit** e **ViewCode**. O objetivo deste projeto é replicar a interface e algumas funcionalidades do WhatsApp para fins de aprendizado e aprimoramento de habilidades em desenvolvimento iOS.
 
 ## Gif do clone
-![gif](https://s4.ezgif.com/tmp/ezgif-4-436d3a268f.gif)
+![gif](.github/whats-clone.gif)
 
 ## Índice
 - [Pré-requisitos](#pré-requisitos)
