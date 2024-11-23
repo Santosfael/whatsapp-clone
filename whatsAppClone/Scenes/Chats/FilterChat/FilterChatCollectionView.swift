@@ -10,7 +10,12 @@ import UIKit
 final class FilterChatCollectionView: UIView {
 
     // MARK: - Private Properties
-    private let filterOptions: [String] = ["All", "Unread", "Favourites", "Groups"]
+    private let filterOptions: [String] = [
+        "AllOptionFilterChats".localized(),
+        "UnreadOptionFilterChats".localized(),
+        "FavouritesOptionFilterChats".localized(),
+        "GroupsOptionFilterChats".localized()
+    ]
     private var selectedFilterItem: Int = 0
 
     // MARK: - Public Delegate

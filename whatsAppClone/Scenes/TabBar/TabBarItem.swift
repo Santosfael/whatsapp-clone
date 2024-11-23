@@ -20,15 +20,15 @@ enum TabBarItem {
     var title: String {
         switch self {
         case .updates:
-            return "Updates"
+            return "UpdatesNavigationTitle".localized()
         case .calls:
-            return "Calls"
+            return "CallsNavigationTitle".localized()
         case .communities:
-            return "Communities"
+            return "CommunitiesNavigationTitle".localized()
         case .chats:
-            return "Chats"
+            return "ChatsNavigationTitle".localized()
         case .settings:
-            return "Settings"
+            return "SettingsNavigationTitle".localized()
         }
     }
 

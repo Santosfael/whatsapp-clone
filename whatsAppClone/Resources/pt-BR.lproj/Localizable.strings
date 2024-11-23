@@ -1,0 +1,15 @@
+// MARK: - Navigation Titles
+"UpdatesNavigationTitle" = "Atualizações";
+"ChatsNavigationTitle" = "Conversas";
+"CallsNavigationTitle" = "Ligações";
+"CommunitiesNavigationTitle" = "Comunidades";
+"SettingsNavigationTitle" = "Configurações";
+
+// MARK: - Options Filter Chats
+"AllOptionFilterChats" = "Todas";
+"UnreadOptionFilterChats" = "Não lidas";
+"FavouritesOptionFilterChats" = "Favoritos";
+"GroupsOptionFilterChats" = "Grupos";
+
+// MARK: - Errors Network
+"errorNetworkUITest" = "Os dados não puderam ser lidos porque não estão no formato correto.";
